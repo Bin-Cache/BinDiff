@@ -1,11 +1,19 @@
 import sys
 import os
+import json
+
+graph = {}
 
 def getCurrentAddress():
-    return Address()
+    return Address(1)
 
 class Program():
     def getListing(self):
+        test_case = os.environ.get("TEST_CASE", 0)
+        file_name = "test"+ str(test_case)+ ".json"
+        folder = os.path.dirname(os.path.abspath(__file__)) + "/test"
+        global graph
+        graph = json.loads(open(os.path.join(folder, file_name), 'r').read())
         return Listing()
     def getReferenceManager(self):
         return ReferenceManager()
@@ -15,30 +23,28 @@ class Program():
 
 class ReferenceManager():
     def getReferencesFrom(self, address):
-        if os.environ.get("TEST_CASE", 0):
-            return self._generateBaseCase()
+        if str(address.getOffset()) in graph:
+             return [Reference(address.getOffset())]
         else:
-            return self._generateTriplet()
-
-    def _generateBaseCase(self):
-        print("generating base case")
-        return []
-
-    def _generateTriplet(self):
-        print("generating triplet")
-        return [Reference(0), Reference(0x4000000), Reference(1e9)]
+            return []       
 
 class Listing():
     def getFunctionContaining(self, address):
-        return Function()
+        return Function(address)
 
 class Function():
+    def __init__(self, address):
+        self.address = address
+
     def getBody(self):
-        return Body()
+        return Body(self.address)
 
 class Body():
-    def getAddresses(self, why):
-        return [Address(), Address(), Address()]
+    def __init__(self, address):
+        self.address = address
+
+    def getAddresses(self, address):
+        return list(map(lambda x: Address(x),graph[str(self.address.getOffset())]))
 
 class Reference():
     def __init__(self, target=0):
@@ -54,17 +60,19 @@ class Reference():
         return Address(self.target)
 
     def getReferenceType(self):
-        return ReferenceType()
+        return ReferenceType(self.target)
     
 class ReferenceType():
+    def __init__(self, target=0):
+        self.target = target
+
     def isRead(self):
         pass
     def isWrite(self):
         pass
 
     def isCall(self):
-        pass
-
+        return str(self.target) in graph
 
 class Address():
     def __init__(self, target=0):
