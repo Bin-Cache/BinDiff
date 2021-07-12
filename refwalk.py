@@ -16,6 +16,8 @@ def printd(text):
 	with open('output_trace.txt', 'a') as output:
 		output.write(text+'\n')
 
+sequence = []
+
 def addSeq(next):
 	#print(hex(next))
 	if next > 0x40000000:
@@ -41,7 +43,9 @@ def getPeripheralRefs(address, refMgr, listing):
 			addSeq(address.getOffset())
 
 
-def getFuncReferences(address, listing, refMgr):
+def getFuncReferences(address, stack, listing, refMgr):
+	stack[address.getOffset()] = True
+	
 	func = listing.getFunctionContaining(address)
 	if (func == None):
 		print("No Function at address " + address.toString())
@@ -53,8 +57,13 @@ def getFuncReferences(address, listing, refMgr):
 		for i in references:
 			if i.getReferenceType().isCall():
 				if shouldCall(address, i):
-					getFuncReferences(i.getToAddress(), listing, refMgr)
+					if(func_address.getOffset() not in stack or stack[func_address.getOffset()] == False):
+						getFuncReferences(i.getToAddress(), stack, listing, refMgr)
+					else:
+						print("I think i've seen this before: ", stack)
+
 			elif (i.getReferenceType().isRead() or i.getReferenceType().isWrite() or i.getReferenceType() == "PARAM"):
 				printd(i)
 				getPeripheralRefs(i.getToAddress(), refMgr, listing)
 	
+	stack[address.getOffset()] = False
