@@ -17,7 +17,7 @@ def printd(text):
 		output.write(text+'\n')
 
 sequence = []
-
+stack = []
 def addSeq(next):
 	#print(hex(next))
 	if next > 0x40000000:
@@ -28,7 +28,6 @@ def getPeripheralRefs(address, refMgr, listing):
 	toAddressRefs = refMgr.getReferencesFrom(address)
 	if len(toAddressRefs) > 0:
 		for i in toAddressRefs:
-			printd(i)
 			if i.getToAddress().getOffset() != i.getFromAddress().getOffset():
 				getPeripheralRefs(i.getToAddress(), refMgr, listing)
 	else:
@@ -43,12 +42,13 @@ def getPeripheralRefs(address, refMgr, listing):
 			addSeq(address.getOffset())
 
 
-def getFuncReferences(address, stack, listing, refMgr):
-	stack[address.getOffset()] = True
+def getFuncReferences(address, listing, refMgr):
+	
+	stack.append(hex(address.getOffset()))
 	
 	func = listing.getFunctionContaining(address)
 	if (func == None):
-		print("No Function at address " + address.toString())
+		printd("No Function at address " + address.toString())
 		return
 	func_addresses = func.getBody().getAddresses(True)
 	
@@ -57,13 +57,13 @@ def getFuncReferences(address, stack, listing, refMgr):
 		for i in references:
 			if i.getReferenceType().isCall():
 				if shouldCall(address, i):
-					if(func_address.getOffset() not in stack or stack[func_address.getOffset()] == False):
-						getFuncReferences(i.getToAddress(), stack, listing, refMgr)
+					if(stack.count(hex(address.getOffset())) < 2):
+						getFuncReferences(i.getToAddress(), listing, refMgr)
 					else:
-						print("I think i've seen this before: ", stack)
+						printd("Recursion on " + hex(address.getOffset()))
+						printd("I think i've seen 0x{0:x} before. Stack: {1}".format(address.getOffset() ,str(stack)))
 
 			elif (i.getReferenceType().isRead() or i.getReferenceType().isWrite() or i.getReferenceType() == "PARAM"):
-				printd(i)
 				getPeripheralRefs(i.getToAddress(), refMgr, listing)
-	
-	stack[address.getOffset()] = False
+
+	stack.pop()
