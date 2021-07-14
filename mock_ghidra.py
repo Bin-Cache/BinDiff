@@ -20,17 +20,22 @@ class Program():
     def getFunctionManager(self):
         raise NotImplementedError("Please, for the love of god")
 
-
+mock_peripheral_address = 0x40000000
 class ReferenceManager():
     def getReferencesFrom(self, address):
         if str(address.getOffset()) in graph:
-             return [Reference(address.getOffset())]
+            return [Reference(address.getOffset())]
+        elif address.getOffset() == mock_peripheral_address:
+            return []
         else:
-            return []       
+            return [Reference(mock_peripheral_address)]
 
 class Listing():
     def getFunctionContaining(self, address):
         return Function(address)
+
+    def getCodeUnitAt(self, address):
+        pass
 
 class Function():
     def __init__(self, address):
@@ -57,7 +62,7 @@ class Reference():
         return Address(self.target)
 
     def getFromAddress(self):
-        return Address(self.target)
+        return Address(-999999999)
 
     def getReferenceType(self):
         return ReferenceType(self.target)
@@ -67,7 +72,7 @@ class ReferenceType():
         self.target = target
 
     def isRead(self):
-        pass
+        return str(self.target) not in graph
     def isWrite(self):
         pass
 

@@ -1,13 +1,17 @@
 def shouldCall(address, ref):
-	calledFunc = ref.getToAddress().getOffset()
-	callingFunc = ref.getFromAddress().getOffset()
-	printd("From 0x{0:x} -> To 0x{1:x}".format(address.getOffset() ,calledFunc))
-	if address.getOffset()  == calledFunc:
-		printd("Recursion?")
+	called_func_offset = ref.getToAddress().getOffset()
+	printd("From 0x{0:x} -> To 0x{1:x}".format(address.getOffset() ,called_func_offset))
+	if address.getOffset()  == called_func_offset:
 		return False
+	elif(hex(called_func_offset) not in stack):
+		if(hex(called_func_offset) in func_refs_dict):
+			return False
+		else:
+			return True
 	else:
-		return True
-
+		printd("Recursion on " + hex(called_func_offset))
+		printd("I think i've seen 0x{0:x} before. Stack: {1}".format(called_func_offset ,str(stack)))
+		return False
 
 def printd(text):
 	print(text)
@@ -16,35 +20,37 @@ def printd(text):
 	with open('output_trace.txt', 'a') as output:
 		output.write(text+'\n')
 
-sequence = []
+func_refs_dict = {}
 stack = []
-def addSeq(next):
-	#print(hex(next))
-	if next > 0x40000000:
-		sequence.append(hex(next))
 
+def should_add_peripheral(next):
+	return next >= 0x40000000
 
-def getPeripheralRefs(address, refMgr, listing):
+def getPeripheralRefs(address, func_pref_seq, refMgr, listing):
 	toAddressRefs = refMgr.getReferencesFrom(address)
 	if len(toAddressRefs) > 0:
 		for i in toAddressRefs:
 			if i.getToAddress().getOffset() != i.getFromAddress().getOffset():
-				getPeripheralRefs(i.getToAddress(), refMgr, listing)
+				getPeripheralRefs(i.getToAddress(), func_pref_seq, refMgr, listing)
 	else:
 		codeUnit = listing.getCodeUnitAt(address)
 		
 		if(codeUnit == None):
-			addSeq(address.getOffset())
+			if should_add_peripheral(address.getOffset()):
+				func_pref_seq.append(hex(address.getOffset()))
 		elif(codeUnit.getScalar(0) != None):
 			pass
-			#addSeq(codeUnit.getScalar(0))
+			#should_add_peripheral(codeUnit.getScalar(0))
 		elif(codeUnit.getMnemonicString() == "??" or codeUnit.getMnemonicString().startswith("undefined")):
-			addSeq(address.getOffset())
+			if should_add_peripheral(address.getOffset()):
+				func_pref_seq.append(hex(address.getOffset()))
 
 
 def getFuncReferences(address, listing, refMgr):
 	
-	stack.append(hex(address.getOffset()))
+	address_offset = address.getOffset()
+	stack.append(hex(address_offset))
+	func_periphs = []
 	
 	func = listing.getFunctionContaining(address)
 	if (func == None):
@@ -55,15 +61,19 @@ def getFuncReferences(address, listing, refMgr):
 	for func_address in func_addresses:
 		references = refMgr.getReferencesFrom(func_address)
 		for i in references:
+			called_func_addr = i.getToAddress()
+			called_func_offset = called_func_addr.getOffset()
 			if i.getReferenceType().isCall():
 				if shouldCall(address, i):
-					if(stack.count(hex(address.getOffset())) < 2):
-						getFuncReferences(i.getToAddress(), listing, refMgr)
-					else:
-						printd("Recursion on " + hex(address.getOffset()))
-						printd("I think i've seen 0x{0:x} before. Stack: {1}".format(address.getOffset() ,str(stack)))
-
+					func_periphs += getFuncReferences(called_func_addr, listing, refMgr)
+				elif(hex(called_func_offset) in func_refs_dict):
+					print("We already cached {0:x}".format(called_func_offset))
+					func_periphs += func_refs_dict[hex(called_func_offset)]	
 			elif (i.getReferenceType().isRead() or i.getReferenceType().isWrite() or i.getReferenceType() == "PARAM"):
-				getPeripheralRefs(i.getToAddress(), refMgr, listing)
+				getPeripheralRefs(called_func_addr, func_periphs, refMgr, listing)
 
+	if hex(address_offset) not in func_refs_dict:
+		func_refs_dict[hex(address_offset)] = func_periphs
 	stack.pop()
+
+	return func_periphs
