@@ -23,7 +23,9 @@ refMgr = currentProgram.getReferenceManager()
 
 
 print("start")
-sys.setrecursionlimit(15000)
-sequence = refwalk.getFuncReferences(currentAddress, listing, refMgr)
+# sequence = refwalk.getFuncReferences(currentAddress, listing, refMgr)
+func_graph = refwalk.get_all_func_props(currentProgram, listing, refMgr)
+print(func_graph )
+sequence = refwalk.getFuncReferencesQueue(currentAddress, func_graph)
 print(len(sequence))
 print(sequence)

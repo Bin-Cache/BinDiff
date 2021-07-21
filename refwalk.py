@@ -1,3 +1,8 @@
+try:
+   from queue import Queue
+except ImportError:
+   from Queue import Queue
+
 def shouldCall(address, ref):
 	called_func_offset = ref.getToAddress().getOffset()
 	printd("From 0x{0:x} -> To 0x{1:x}".format(address.getOffset() ,called_func_offset))
@@ -77,3 +82,44 @@ def getFuncReferences(address, listing, refMgr):
 	stack.pop()
 
 	return func_periphs
+
+def getFuncReferencesQueue(function_addr, func_graph):
+    func_periphs = []
+    q = Queue()
+    seen = set()
+    func_offset = hex(function_addr.getOffset()).rstrip("L")
+    q.put(func_offset)
+    while(not q.empty()):
+        current_addr = q.get()
+        if(current_addr not in seen):
+            seen.add(current_addr)
+            func_periphs.extend(func_graph[current_addr][1])
+        
+        for child in func_graph[current_addr][0]:
+            if(child not in seen):
+                q.put(child)
+
+    return func_periphs
+
+def get_func_props(func, refMgr, listing):
+    child_funcs = []
+    func_periphs = []
+    func_addresses = func.getBody().getAddresses(True)
+    for func_address in func_addresses:
+        references = refMgr.getReferencesFrom(func_address)
+        for i in references:
+            if i.getReferenceType().isCall():
+                if i.getToAddress().getOffset() != i.getFromAddress().getOffset():
+                    child_funcs.append(hex(i.getToAddress().getOffset()).rstrip("L"))
+            elif (i.getReferenceType().isRead() or i.getReferenceType().isWrite() or i.getReferenceType() == "PARAM"):
+                getPeripheralRefs(i.getToAddress(), func_periphs, refMgr, listing)
+    return (child_funcs, func_periphs)
+
+
+def get_all_func_props(currentProgram, listing, refMgr):
+    func_graph = {}
+    fm = currentProgram.getFunctionManager()
+    funcs = fm.getFunctions(True)
+    for func in funcs:
+        func_graph[hex(int(func.getEntryPoint().getOffset()))] = get_func_props(func, refMgr, listing)
+    return func_graph

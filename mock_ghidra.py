@@ -18,7 +18,7 @@ class Program():
     def getReferenceManager(self):
         return ReferenceManager()
     def getFunctionManager(self):
-        raise NotImplementedError("Please, for the love of god")
+        return FunctionManager()
 
 mock_peripheral_address = 0x40000000
 class ReferenceManager():
@@ -43,6 +43,12 @@ class Function():
 
     def getBody(self):
         return Body(self.address)
+
+    def getEntryPoint(self):
+        return self.address
+    
+    def getName(self):
+        return self.address.getOffset()
 
 class Body():
     def __init__(self, address):
@@ -80,14 +86,18 @@ class ReferenceType():
         return str(self.target) in graph
 
 class Address():
-    def __init__(self, target=0):
+    def __init__(self, target: int = 0):
         self.target = target
 
     def toString(self):
         return str(self)
 
-    def getOffset(self):
+    def getOffset(self) -> int:
         return self.target
+
+class FunctionManager():
+    def getFunctions(self, forward = True):
+        return [Function(Address(x)) for x in list(graph.keys())]
 
 def getCurrentProgram():
     return Program()
