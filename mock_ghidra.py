@@ -1,6 +1,8 @@
 import sys
 import os
 import json
+import draw_graph
+import random
 
 graph = {}
 
@@ -14,6 +16,7 @@ class Program():
         folder = os.path.dirname(os.path.abspath(__file__)) + "/test"
         global graph
         graph = json.loads(open(os.path.join(folder, file_name), 'r').read())
+        draw_graph.draw_graph(graph, f"test_data{test_case}.png")
         return Listing()
     def getReferenceManager(self):
         return ReferenceManager()
@@ -25,10 +28,10 @@ class ReferenceManager():
     def getReferencesFrom(self, address):
         if str(address.getOffset()) in graph:
             return [Reference(address.getOffset())]
-        elif address.getOffset() == mock_peripheral_address:
+        elif address.getOffset() >= mock_peripheral_address:
             return []
         else:
-            return [Reference(mock_peripheral_address)]
+            return [Reference(mock_peripheral_address + random.randint(1,1000))]
 
 class Listing():
     def getFunctionContaining(self, address):
