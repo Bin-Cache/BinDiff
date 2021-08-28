@@ -3,12 +3,16 @@ try:
 except ImportError:
    from Queue import Queue
 
+
+def getAddress(currentProgram, offset):
+    return currentProgram.getAddressFactory().getDefaultAddressSpace().getAddress(offset)
+
 def shouldCall(address, ref):
 	called_func_offset = ref.getToAddress().getOffset()
 	printd("From 0x{0:x} -> To 0x{1:x}".format(address.getOffset() ,called_func_offset))
 	if address.getOffset()  == called_func_offset:
 		return False
-	elif(hex(called_func_offset) not in stack):
+	elif(called_func_offset not in stack):
 		if(hex(called_func_offset) in func_refs_dict):
 			return False
 		else:
@@ -54,7 +58,8 @@ def getPeripheralRefs(address, func_pref_seq, refMgr, listing):
 def getFuncReferences(address, listing, refMgr):
 	
 	address_offset = address.getOffset()
-	stack.append(hex(address_offset))
+
+	stack.append(address_offset)
 	func_periphs = []
 	
 	func = listing.getFunctionContaining(address)
@@ -122,4 +127,9 @@ def get_all_func_props(currentProgram, listing, refMgr):
     funcs = fm.getFunctions(True)
     for func in funcs:
         func_graph[hex(int(func.getEntryPoint().getOffset()))] = get_func_props(func, refMgr, listing)
+    return func_graph
+
+def get_all_func_peripherals(currentProgram, listing, func_graph, refMgr):  
+    for func_address in func_graph:
+       func_graph[func_address] = (func_graph[func_address][0], getFuncReferences(getAddress(currentProgram, func_address), listing, refMgr))
     return func_graph

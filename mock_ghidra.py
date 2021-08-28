@@ -19,6 +19,8 @@ class Program():
         return ReferenceManager()
     def getFunctionManager(self):
         return FunctionManager()
+    def getAddressFactory(self):
+        return AddressFactory()
 
 mock_peripheral_address = 0x40000000
 class ReferenceManager():
@@ -93,11 +95,24 @@ class Address():
         return str(self)
 
     def getOffset(self) -> int:
+        if type(self.target) == str:
+            if self.target.startswith('0x'):
+                return int(self.target,0)
+            else:
+                return int(self.target)
         return self.target
 
 class FunctionManager():
     def getFunctions(self, forward = True):
         return [Function(Address(x)) for x in list(graph.keys())]
+
+class AddressFactory():
+    def getDefaultAddressSpace(self):
+        return AddressSpace()
+
+class AddressSpace():
+    def getAddress(self, offset):
+        return Address(offset)
 
 def getCurrentProgram():
     return Program()
