@@ -88,13 +88,13 @@ class ReferenceType():
         return str(self.target) in graph
 
 class Address():
-    def __init__(self, target: int = 0):
+    def __init__(self, target= 0):
         self.target = target
 
     def toString(self):
         return str(self)
 
-    def getOffset(self) -> int:
+    def getOffset(self):
         if type(self.target) == str:
             if self.target.startswith('0x'):
                 return int(self.target,0)

@@ -1,5 +1,7 @@
 import sys
 import refwalk
+import json
+import os
 
 try:
     if currentAddress:
@@ -25,6 +27,21 @@ refMgr = currentProgram.getReferenceManager()
 print("start")
 # sequence = refwalk.getFuncReferences(currentAddress, listing, refMgr)
 func_graph = refwalk.get_all_func_props(currentProgram, listing, refMgr)
-print(func_graph)
-func_graph = refwalk.get_all_func_peripherals(currentProgram,listing, func_graph, refMgr)
-print(func_graph)
+# func_graph = refwalk.get_all_func_peripherals(currentProgram,listing, func_graph, refMgr)
+func_graph = refwalk.get_all_func_instructions(listing, func_graph, currentProgram)
+refwalk.printd(func_graph)
+ 
+
+try:
+    folder = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    folder = "/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/"
+
+out_file = os.environ.get("OUT_FILE", None)
+if out_file:
+    file_name = os.path.join(folder, out_file)
+else:
+    file_name = os.path.join(folder, 'graphA.json')
+
+with open(file_name, "w") as outfile: 
+    json.dump(func_graph, outfile)
