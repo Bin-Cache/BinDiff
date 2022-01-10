@@ -133,6 +133,30 @@ def get_all_func_props(currentProgram, listing, refMgr):
         func_graph[hex(int(func.getEntryPoint().getOffset()))] = get_func_props(func, refMgr, listing)
     return func_graph
 
+
+from ghidra.program.model.block import BasicBlockModel
+from ghidra.util.task import TaskMonitor
+
+
+def get_func_blocks(currentProgram, listing, func_address):
+    block_list = []
+    blockModel = BasicBlockModel(currentProgram)
+    func = listing.getFunctionContaining(getAddress(currentProgram,func_address))
+    blocks = blockModel.getCodeBlocksContaining(func.getBody(), TaskMonitor.DUMMY)
+    block = blocks.next()
+
+    while block:
+        instructions = ""
+        ins_iter = listing.getInstructions(block, True)
+
+        while ins_iter.hasNext():
+            ins = ins_iter.next()
+            instructions += "&" + ins.getAddressString(False, True) +" "+ ins.toString()
+        block = blocks.next()
+        block_list.append(instructions)
+    print(block_list)
+    return block_list
+
 def get_all_func_peripherals(currentProgram, listing, func_graph, refMgr):  
     for func_address in func_graph:
        func_graph[func_address] = (func_graph[func_address][0], getFuncReferences(getAddress(currentProgram, func_address), listing, refMgr))
@@ -147,12 +171,23 @@ def get_all_func_instructions(listing, func_graph, currentProgram):
             instruction = listing.getInstructionAt(instr_address)
             if instruction:
                 instruction_string = instruction.toString()
-                instructions += " " + instruction_string
+                instructions += "&" + instruction_string.strip()
             else:
                 print(instr_address)
           
-
+        instructions = instructions[1:]
         print(instructions)
             
         func_graph[func_address] = (func_graph[func_address][0], func_graph[func_address][1], instructions)
+    return func_graph
+
+
+def get_all_func_blocks(currentProgram, listing, func_graph): 
+    for func_address in func_graph:
+       func_graph[func_address] = (func_graph[func_address][0], get_func_blocks(currentProgram, listing, func_address), func_graph[func_address][1], func_graph[func_address][2])
+    return func_graph
+
+def get_all_func_end(currentProgram, listing, func_graph): 
+    for func_address in func_graph:
+       func_graph[func_address] = func_graph[func_address] + (hex(listing.getFunctionContaining(getAddress(currentProgram,func_address)).getBody().getMaxAddress().getOffset()),)
     return func_graph

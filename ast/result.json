@@ -1,0 +1,1802 @@
+{'values_changed': {
+        "root['edges'][10]": {'new_value': {'id': '11', 'source': 'i v 1273', 'target': 'ram: 2000b830 o 42', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '11', 'source': 'i v 1701', 'target': 'ram: 2000baa4 o 42', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][151]": {'new_value': {'id': '152', 'source': 'ram: 2000b876 o 86', 'target': 'ram: 2000b876 v 219', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '152', 'source': 'ram: 2000bb04 o 523', 'target': 'ram: 2000bb04 v 1539', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][113]": {'new_value': {'id': '114', 'source': 'ram: 2000b864 v 1186', 'target': 'ram: 2000b866 o 386', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '114', 'source': 'i v 424', 'target': 'ram: 2000bae8 o 166', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][9]": {'new_value': {'id': 'ram: 2000b82a v 38', 'Name': 'unique: 00088c80', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000ba9e v 38', 'Name': 'unique: 00088c80', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][68]": {'new_value': {'id': 'ram: 2000b852 v 423', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bad0 o 177', 'Name': 'INT_SLESS', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][108]": {'new_value': {'id': '109', 'source': 'i v 1066', 'target': 'ram: 2000b864 o 410', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '109', 'source': 'ram: 2000bacc v 1571', 'target': 'ram: 2000bae4 o 537', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][30]": {'new_value': {'id': 'i v 1282', 'Name': 'const: 00000033', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 147', 'Name': 'ram: 20008216', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][202]": {'new_value': {'id': '203', 'source': 'ram: 2000b888 v 1168', 'target': 'ram: 2000b88a o 389', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '203', 'source': 'i v 1449', 'target': 'ram: 2000bb16 o 94', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][149]": {'new_value': {'id': '150', 'source': 'i v 1273', 'target': 'ram: 2000b876 o 86', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '150', 'source': 'ram: 2000bab0 v 1496', 'target': 'ram: 2000bb04 o 523', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][135]": {'new_value': {'id': '136', 'source': 'ram: 2000b872 o 79', 'target': 'ram: 2000b872 v 201', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '136', 'source': 'ram: 2000baf8 v 1542', 'target': 'ram: 2000bafa o 505', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][24]": {'new_value': {'id': '25', 'source': 'ram: 2000b834 o 46', 'target': 'ram: 2000b834 v 120', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '25', 'source': 'ram: 2000baa8 o 46', 'target': 'ram: 2000baa8 v 120', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][140]": {'new_value': {'id': '141', 'source': 'ram: 2000b872 o 262', 'target': 'ram: 2000b872 v 699', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '141', 'source': 'i v 611', 'target': 'ram: 2000bafe o 241', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][44]": {'new_value': {'id': 'ram: 2000b85a v 1177', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'i v 354', 'Name': 'ram: 2000baec', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][129]": {'new_value': {'id': '130', 'source': 'ram: 2000b870 o 401', 'target': 'ram: 2000b870 v 1183', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '130', 'source': 'ram: 2000baf8 o 524', 'target': 'ram: 2000baf8 v 1542', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][112]": {'new_value': {'id': 'ram: 2000b866 o 405', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae6 v 398', 'Name': 'tmpCY', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][62]": {'new_value': {'id': '63', 'source': 'ram: 2000b852 o 164', 'target': 'ram: 2000b852 v 423', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '63', 'source': 'ram: 2000bad0 v 449', 'target': 'ram: 2000bad2 o 184', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][78]": {'new_value': {'id': '79', 'source': 'ram: 2000b842 v 1143', 'target': 'ram: 2000b858 o 398', 'EdgeType': 'Default', 'Weight': '2'
+            }, 'old_value': {'id': '79', 'source': 'ram: 2000badc v 499', 'target': 'ram: 2000badc o 198', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][77]": {'new_value': {'id': 'ram: 2000b856 o 397', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bad6 v 477', 'Name': 'unique: 0008a580', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][131]": {'new_value': {'id': 'ram: 2000b872 v 699', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000baf8 v 1542', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][8]": {'new_value': {'id': '9', 'source': 'i v 41', 'target': 'ram: 2000b82a o 15', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '9', 'source': 'i v 41', 'target': 'ram: 2000ba9e o 15', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][176]": {'new_value': {'id': '177', 'source': 'i v 1273', 'target': 'ram: 2000b882 o 108', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '177', 'source': 'ram: 2000bb06 v 1509', 'target': 'ram: 2000bb0a o 514', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][209]": {'new_value': {'id': '210', 'source': 'i v 1273', 'target': 'ram: 2000b890 o 388', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '210', 'source': 'ram: 2000bb10 v 203', 'target': 'ram: 2000bb18 o 96', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][156]": {'new_value': {'id': '157', 'source': 'i v 1273', 'target': 'ram: 2000b878 o 88', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '157', 'source': 'i v 163', 'target': 'ram: 2000bb06 o 64', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][194]": {'new_value': {'id': 'ram: 2000b890 o 378', 'Name': 'PIECE', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb16 o 94', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][189]": {'new_value': {'id': 'ram: 2000b88a o 389', 'Name': 'COPY', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb14 o 515', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][39]": {'new_value': {'id': '40', 'source': 'ram: 2000b85a v 1177', 'target': 'ram: 2000b842 o 387', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '40', 'source': 'ram: 2000bab6 v 328', 'target': 'ram: 2000bab8 o 137', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][68]": {'new_value': {'id': '69', 'source': 'i v 1273', 'target': 'ram: 2000b856 o 175', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '69', 'source': 'ram: 2000bad6 v 477', 'target': 'ram: 2000bad6 o 189', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][1]": {'new_value': {'id': 'i v 1062', 'Shape': 'Triangle Down', 'Name': 'sp', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'i v 1397', 'Shape': 'Triangle Down', 'Name': 'sp', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][67]": {'new_value': {'id': '68', 'source': 'ram: 2000b854 o 168', 'target': 'ram: 2000b854 v 435', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '68', 'source': 'ram: 2000bad6 o 188', 'target': 'ram: 2000bad6 v 477', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][166]": {'new_value': {'id': 'i v 280', 'Name': 'const: 0000001c', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 181', 'Name': 'const: 00000010', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][14]": {'new_value': {'id': 'ram: 2000b830 v 108', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000baa4 v 108', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][78]": {'new_value': {'id': 'ram: 2000b856 v 1171', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bad6 o 189', 'Name': 'INT_ZEXT', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][177]": {'new_value': {'id': '178', 'source': 'i v 280', 'target': 'ram: 2000b882 o 108', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '178', 'source': 'ram: 2000bb0a o 514', 'target': 'ram: 2000bb0a v 1512', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][48]": {'new_value': {'id': 'ram: 2000b842 v 1199', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }, 'old_value': {'id': 'i v 1459', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][79]": {'new_value': {'id': 'ram: 2000b858 o 179', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bad6 v 480', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][116]": {'new_value': {'id': 'i v 1128', 'Name': 'const: 00000032', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 579', 'Name': 'ram: 20008216', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][76]": {'new_value': {'id': '77', 'source': 'i v 466', 'target': 'ram: 2000b858 o 179', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '77', 'source': 'i v 501', 'target': 'ram: 2000badc o 197', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][21]": {'new_value': {'id': '22', 'source': 'ram: 2000b832 o 45', 'target': 'ram: 2000b832 v 117', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '22', 'source': 'ram: 2000baa6 o 45', 'target': 'ram: 2000baa6 v 117', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][24]": {'new_value': {'id': 'ram: 2000b834 o 46', 'Name': 'INT_EQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baa8 o 46', 'Name': 'INT_EQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][67]": {'new_value': {'id': 'i v 425', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bacc v 1571', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['edges'][207]": {'new_value': {'id': '208', 'source': 'i v 1116', 'target': 'ram: 2000b890 o 378', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '208', 'source': 'ram: 2000bb18 o 95', 'target': 'ram: 2000bb18 v 244', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][120]": {'new_value': {'id': '121', 'source': 'ram: 2000b86a v 510', 'target': 'ram: 2000b86e o 214', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '121', 'source': 'i v 1401', 'target': 'ram: 2000baf2 o 531', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][180]": {'new_value': {'id': 'ram: 2000b888 v 302', 'Name': 'unique: 00085100', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bb0e o 76', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][79]": {'new_value': {'id': '80', 'source': 'ram: 2000b856 v 1171', 'target': 'ram: 2000b858 o 398', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '80', 'source': 'ram: 2000badc o 198', 'target': 'ram: 2000badc v 502', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][70]": {'new_value': {'id': 'ram: 2000b852 v 426', 'Name': 'r1', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bad0 v 449', 'Name': 'tmpNG', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][175]": {'new_value': {'id': '176', 'source': 'ram: 2000b880 o 393', 'target': 'ram: 2000b880 v 1159', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '176', 'source': 'i v 1447', 'target': 'ram: 2000bb0a o 72', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][59]": {'new_value': {'id': 'ram: 2000b84c o 156', 'Name': 'INT_ZEXT', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 439', 'Name': 'ram: 2000bc60', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][81]": {'new_value': {'id': '82', 'source': 'i v 1273', 'target': 'ram: 2000b85a o 65', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '82', 'source': 'ram: 2000bad6 v 480', 'target': 'ram: 2000bade o 201', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][149]": {'new_value': {'id': 'ram: 2000b878 o 89', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb04 o 523', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][198]": {'new_value': {'id': '199', 'source': 'ram: 2000b88a v 1089', 'target': 'ram: 2000b88a o 134', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '199', 'source': 'i v 1701', 'target': 'ram: 2000bb16 o 93', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][143]": {'new_value': {'id': 'i v 1111', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bb02 v 649', 'Name': 'unique: 00076f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['edges'][70]": {'new_value': {'id': '71', 'source': 'ram: 2000b856 o 175', 'target': 'ram: 2000b856 v 452', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '71', 'source': 'ram: 2000bad6 v 480', 'target': 'ram: 2000bad8 o 192', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][121]": {'new_value': {'id': '122', 'source': 'i v 1128', 'target': 'ram: 2000b86e o 214', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '122', 'source': 'ram: 2000baf2 o 531', 'target': 'ram: 2000baf2 v 1559', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][175]": {'new_value': {'id': 'ram: 2000b884 o 111', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb0c o 74', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][122]": {'new_value': {'id': 'ram: 2000b870 v 555', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000baf2 v 1559', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['nodes'][121]": {'new_value': {'id': 'i v 556', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000baf2 o 531', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][123]": {'new_value': {'id': '124', 'source': 'i v 553', 'target': 'ram: 2000b86e o 215', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '124', 'source': 'ram: 2000baf6 o 229', 'target': 'ram: 2000baf6 v 580', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][178]": {'new_value': {'id': '179', 'source': 'ram: 2000b882 o 108', 'target': 'ram: 2000b882 v 278', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '179', 'source': 'i v 1701', 'target': 'ram: 2000bb0c o 73', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][44]": {'new_value': {'id': '45', 'source': 'i v 375', 'target': 'ram: 2000b846 o 144', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '45', 'source': 'ram: 2000bac0 o 506', 'target': 'ram: 2000bac0 v 1490', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][5]": {'new_value': {'id': 'i v 1273', 'Shape': 'Triangle Down', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'i v 1701', 'Shape': 'Triangle Down', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][99]": {'new_value': {'id': 'ram: 2000b862 v 481', 'Name': 'r5', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'i v 542', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][23]": {'new_value': {'id': 'ram: 2000b832 v 117', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000baa6 v 117', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][159]": {'new_value': {'id': '160', 'source': 'ram: 2000b878 v 225', 'target': 'ram: 2000b878 o 89', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '160', 'source': 'ram: 2000bb06 v 822', 'target': 'ram: 2000bb06 o 65', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][17]": {'new_value': {'id': 'ram: 2000b830 o 390', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baa4 o 512', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][162]": {'new_value': {'id': '163', 'source': 'i v 233', 'target': 'ram: 2000b87a o 90', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '163', 'source': 'ram: 2000bb06 o 312', 'target': 'ram: 2000bb06 v 822', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][2]": {'new_value': {'id': 'i v 1127', 'Name': 'const:fffffff0', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 1467', 'Name': 'const:fffffff0', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][199]": {'new_value': {'id': '200', 'source': 'ram: 2000b872 v 1204', 'target': 'ram: 2000b88a o 379', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '200', 'source': 'i v 240', 'target': 'ram: 2000bb16 o 93', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][160]": {'new_value': {'id': 'ram: 2000b880 v 272', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bb06 v 1536', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][152]": {'new_value': {'id': 'i v 233', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bb04 v 1587', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['edges'][145]": {'new_value': {'id': '146', 'source': 'ram: 2000b872 o 400', 'target': 'ram: 2000b872 v 1180', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '146', 'source': 'i v 652', 'target': 'ram: 2000bb02 o 258', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][39]": {'new_value': {'id': 'ram: 2000b842 o 140', 'Name': 'CALL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 148', 'Name': 'ram: 2000bb04', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][158]": {'new_value': {'id': '159', 'source': 'ram: 2000b878 o 88', 'target': 'ram: 2000b878 v 225', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '159', 'source': 'ram: 2000bb06 v 161', 'target': 'ram: 2000bb06 o 65', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][27]": {'new_value': {'id': 'ram: 2000b834 o 47', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baa8 o 47', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][123]": {'new_value': {'id': 'ram: 2000b870 o 401', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baf6 o 229', 'Name': 'COPY', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][43]": {'new_value': {'id': 'ram: 2000b842 o 387', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bab8 o 137', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][94]": {'new_value': {'id': '95', 'source': 'ram: 2000b85a o 407', 'target': 'ram: 2000b85a v 1201', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '95', 'source': 'ram: 2000bae0 v 1527', 'target': 'ram: 2000bae2 o 520', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][96]": {'new_value': {'id': '97', 'source': 'ram: 2000b85a v 169', 'target': 'ram: 2000b85c o 67', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '97', 'source': 'i v 1701', 'target': 'ram: 2000bae4 o 154', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][50]": {'new_value': {'id': 'i v 375', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bac0 v 1490', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][51]": {'new_value': {'id': 'ram: 2000b846 v 373', 'Name': 'tmpNG', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bac0 o 533', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][173]": {'new_value': {'id': '174', 'source': 'i v 1112', 'target': 'ram: 2000b880 o 107', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '174', 'source': 'ram: 2000bb0a o 71', 'target': 'ram: 2000bb0a v 179', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][77]": {'new_value': {'id': '78', 'source': 'ram: 2000b858 o 179', 'target': 'ram: 2000b858 v 464', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '78', 'source': 'ram: 2000badc o 197', 'target': 'ram: 2000badc v 499', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][200]": {'new_value': {'id': '201', 'source': 'ram: 2000b87c v 243', 'target': 'ram: 2000b88a o 379', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '201', 'source': 'ram: 2000bb16 o 93', 'target': 'ram: 2000bb16 v 238', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][92]": {'new_value': {'id': '93', 'source': 'i v 1066', 'target': 'ram: 2000b85a o 407', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '93', 'source': 'ram: 2000bae2 o 212', 'target': 'ram: 2000bae2 v 540', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][167]": {'new_value': {'id': '168', 'source': 'ram: 2000b87a v 234', 'target': 'ram: 2000b87c o 94', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '168', 'source': 'ram: 2000bb06 o 522', 'target': 'ram: 2000bb06 v 1536', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][46]": {'new_value': {'id': '47', 'source': 'i v 390', 'target': 'ram: 2000b848 o 151', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '47', 'source': 'ram: 2000bac0 o 533', 'target': 'ram: 2000bac0 v 1567', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][151]": {'new_value': {'id': 'ram: 2000b87a o 90', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb04 o 539', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][140]": {'new_value': {'id': 'i v 221', 'Name': 'const: 00000010', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 611', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][61]": {'new_value': {'id': 'ram: 2000b84e o 159', 'Name': 'INT_EQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bacc v 797', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][90]": {'new_value': {'id': '91', 'source': 'ram: 2000b858 v 1173', 'target': 'ram: 2000b85a o 399', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '91', 'source': 'ram: 2000bae4 v 903', 'target': 'ram: 2000bae2 o 212', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][100]": {'new_value': {'id': '101', 'source': 'i v 482', 'target': 'ram: 2000b862 o 186', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '101', 'source': 'ram: 2000bae4 o 155', 'target': 'ram: 2000bae4 v 395', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][22]": {'new_value': {'id': 'ram: 2000b832 o 45', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baa6 o 45', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][147]": {'new_value': {'id': '148', 'source': 'ram: 2000b85a v 1201', 'target': 'ram: 2000b872 o 408', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '148', 'source': 'i v 150', 'target': 'ram: 2000bb04 o 59', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][113]": {'new_value': {'id': 'ram: 2000b86a o 198', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae8 o 166', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][64]": {'new_value': {'id': '65', 'source': 'ram: 2000b852 o 165', 'target': 'ram: 2000b852 v 426', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '65', 'source': 'i v 476', 'target': 'ram: 2000bad6 o 187', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][23]": {'new_value': {'id': '24', 'source': 'i v 122', 'target': 'ram: 2000b834 o 46', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '24', 'source': 'i v 122', 'target': 'ram: 2000baa8 o 46', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][82]": {'new_value': {'id': '83', 'source': 'i v 168', 'target': 'ram: 2000b85a o 65', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '83', 'source': 'ram: 2000bade o 201', 'target': 'ram: 2000bade v 511', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][197]": {'new_value': {'id': '198', 'source': 'i v 570', 'target': 'ram: 2000b88a o 134', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '198', 'source': 'ram: 2000bb14 o 515', 'target': 'ram: 2000bb14 v 1515', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][118]": {'new_value': {'id': 'ram: 2000b86e o 215', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 1461', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][186]": {'new_value': {'id': '187', 'source': 'ram: 2000b884 v 284', 'target': 'ram: 2000b884 o 111', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '187', 'source': 'ram: 2000bb0e v 191', 'target': 'ram: 2000bb0e o 76', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][186]": {'new_value': {'id': 'i v 570', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bb14 v 232', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['edges'][65]": {'new_value': {'id': '66', 'source': 'ram: 2000b852 v 426', 'target': 'ram: 2000b854 o 168', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '66', 'source': 'ram: 2000bad6 o 187', 'target': 'ram: 2000bad6 v 474', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][65]": {'new_value': {'id': 'i v 421', 'Name': 'ram: 2000b858', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bacc o 534', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][111]": {'new_value': {'id': 'ram: 2000b866 o 386', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae6 o 156', 'Name': 'INT_LESS', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][100]": {'new_value': {'id': 'ram: 2000b864 o 279', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae2 v 540', 'Name': 'r5', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][153]": {'new_value': {'id': 'ram: 2000b87a v 231', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bb06 o 64', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][49]": {'new_value': {'id': '50', 'source': 'i v 400', 'target': 'ram: 2000b84c o 154', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '50', 'source': 'i v 391', 'target': 'ram: 2000bac6 o 153', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][182]": {'new_value': {'id': 'i v 1124', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bb10 o 79', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][194]": {'new_value': {'id': '195', 'source': 'i v 1124', 'target': 'ram: 2000b888 o 119', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '195', 'source': 'ram: 2000bb14 v 232', 'target': 'ram: 2000bb14 o 92', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][171]": {'new_value': {'id': 'ram: 2000b882 v 1162', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bb0a v 1512', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][55]": {'new_value': {'id': 'i v 400', 'Name': 'const: 00000002', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bac4 v 379', 'Name': 'r5', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][148]": {'new_value': {'id': 'ram: 2000b878 v 225', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bb04 v 149', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][163]": {'new_value': {'id': 'ram: 2000b880 o 393', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb06 o 538', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][35]": {'new_value': {'id': '36', 'source': 'i v 363', 'target': 'ram: 2000b842 o 140', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '36', 'source': 'ram: 2000baa6 v 117', 'target': 'ram: 2000bab6 o 127', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][205]": {'new_value': {'id': '206', 'source': 'ram: 2000b890 v 1088', 'target': 'ram: 2000b890 o 36', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '206', 'source': 'i v 1701', 'target': 'ram: 2000bb18 o 95', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][161]": {'new_value': {'id': 'ram: 2000b880 o 107', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb06 v 1509', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][124]": {'new_value': {'id': '125', 'source': 'ram: 2000b86e v 550', 'target': 'ram: 2000b86e o 215', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '125', 'source': 'ram: 2000baf6 v 580', 'target': 'ram: 2000baf8 o 337', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][114]": {'new_value': {'id': 'i v 512', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 424', 'Name': 'ram: 2000bac8', 'VertexType': 'Default'
+            }
+        },
+        "root['nodes'][172]": {'new_value': {'id': 'ram: 2000b884 o 110', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb0c o 73', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][130]": {'new_value': {'id': '131', 'source': 'i v 1066', 'target': 'ram: 2000b870 o 409', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '131', 'source': 'ram: 2000baf2 v 1559', 'target': 'ram: 2000baf8 o 540', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][7]": {'new_value': {'id': '8', 'source': 'ram: 2000b82a o 14', 'target': 'ram: 2000b82a v 38', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '8', 'source': 'ram: 2000ba9e o 14', 'target': 'ram: 2000ba9e v 38', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][183]": {'new_value': {'id': 'ram: 2000b888 o 396', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb10 v 203', 'Name': 'r1', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][41]": {'new_value': {'id': 'ram: 2000b85a v 748', 'Name': 'r5', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'i v 1726', 'Name': 'const: 00000033', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][64]": {'new_value': {'id': 'ram: 2000b850 o 163', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bacc v 1493', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][154]": {'new_value': {'id': '155', 'source': 'ram: 2000b872 v 1153', 'target': 'ram: 2000b876 o 392', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '155', 'source': 'ram: 2000bb04 o 539', 'target': 'ram: 2000bb04 v 1587', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][11]": {'new_value': {'id': 'i v 41', 'Name': 'ram: 2000b82e', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'i v 41', 'Name': 'ram: 2000baa2', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][16]": {'new_value': {'id': '17', 'source': 'ram: 2000b830 o 390', 'target': 'ram: 2000b830 v 1150', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '17', 'source': 'ram: 2000baa4 o 512', 'target': 'ram: 2000baa4 v 1506', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][174]": {'new_value': {'id': '175', 'source': 'ram: 2000b876 v 1156', 'target': 'ram: 2000b880 o 393', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '175', 'source': 'ram: 2000bb0a v 179', 'target': 'ram: 2000bb0a o 72', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][29]": {'new_value': {'id': 'ram: 2000b836 o 48', 'Name': 'INT_LESS', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bab0 o 57', 'Name': 'CALL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][58]": {'new_value': {'id': '59', 'source': 'i v 421', 'target': 'ram: 2000b850 o 163', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '59', 'source': 'ram: 2000bacc v 797', 'target': 'ram: 2000bad0 o 177', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][22]": {'new_value': {'id': '23', 'source': 'ram: 2000b832 v 117', 'target': 'ram: 2000b834 o 46', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '23', 'source': 'ram: 2000baa6 v 117', 'target': 'ram: 2000baa8 o 46', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][15]": {'new_value': {'id': 'ram: 2000b830 o 43', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baa4 o 43', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][33]": {'new_value': {'id': 'i v 151', 'Name': 'ram: 2000b862', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bab0 o 508', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][32]": {'new_value': {'id': '33', 'source': 'i v 154', 'target': 'ram: 2000b83a o 59', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '33', 'source': 'i v 1401', 'target': 'ram: 2000bab0 o 535', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][46]": {'new_value': {'id': 'ram: 2000b842 o 406', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 378', 'Name': 'ram: 20008216', 'VertexType': 'Default'
+            }
+        },
+        "root['nodes'][106]": {'new_value': {'id': 'ram: 2000b864 o 410', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae4 o 155', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][53]": {'new_value': {'id': 'i v 390', 'Name': 'ram: 2000b858', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bac4 o 148', 'Name': 'COPY', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][138]": {'new_value': {'id': '139', 'source': 'ram: 2000b870 v 555', 'target': 'ram: 2000b872 o 262', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '139', 'source': 'ram: 2000bafa o 532', 'target': 'ram: 2000bafa v 1563', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][114]": {'new_value': {'id': '115', 'source': 'ram: 2000b866 o 386', 'target': 'ram: 2000b866 v 1140', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '115', 'source': 'ram: 2000bae6 v 398', 'target': 'ram: 2000bae8 o 166', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][66]": {'new_value': {'id': '67', 'source': 'ram: 2000b84c v 404', 'target': 'ram: 2000b854 o 168', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '67', 'source': 'ram: 2000bad6 v 474', 'target': 'ram: 2000bad6 o 188', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][133]": {'new_value': {'id': '134', 'source': 'i v 1273', 'target': 'ram: 2000b872 o 79', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '134', 'source': 'i v 602', 'target': 'ram: 2000bafa o 238', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][32]": {'new_value': {'id': 'ram: 2000b838 o 58', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 1458', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][86]": {'new_value': {'id': 'ram: 2000b85a v 166', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'i v 501', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][144]": {'new_value': {'id': '145', 'source': 'ram: 2000b85a v 1177', 'target': 'ram: 2000b872 o 400', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '145', 'source': 'ram: 2000bb02 o 257', 'target': 'ram: 2000bb02 v 649', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][86]": {'new_value': {'id': '87', 'source': 'ram: 2000b83a v 153', 'target': 'ram: 2000b85a o 276', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '87', 'source': 'ram: 2000bae0 v 528', 'target': 'ram: 2000bae0 o 209', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][20]": {'new_value': {'id': '21', 'source': 'ram: 2000b832 v 114', 'target': 'ram: 2000b832 o 45', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '21', 'source': 'ram: 2000baa6 v 114', 'target': 'ram: 2000baa6 o 45', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][164]": {'new_value': {'id': '165', 'source': 'ram: 2000b87a v 231', 'target': 'ram: 2000b87a o 91', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '165', 'source': 'ram: 2000bb06 o 513', 'target': 'ram: 2000bb06 v 1509', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][115]": {'new_value': {'id': 'ram: 2000b86e o 214', 'Name': 'INT_SLESS', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baf2 o 228', 'Name': 'CALL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][141]": {'new_value': {'id': 'ram: 2000b876 v 219', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bb02 o 257', 'Name': 'INT_SLESS', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][189]": {'new_value': {'id': '190', 'source': 'ram: 2000b884 o 395', 'target': 'ram: 2000b884 v 1165', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '190', 'source': 'ram: 2000bb0e v 194', 'target': 'ram: 2000bb10 o 79', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][13]": {'new_value': {'id': '14', 'source': 'ram: 2000b830 v 108', 'target': 'ram: 2000b830 o 43', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '14', 'source': 'ram: 2000baa4 v 108', 'target': 'ram: 2000baa4 o 43', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][109]": {'new_value': {'id': 'ram: 2000b866 o 195', 'Name': 'CALL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae4 o 521', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][18]": {'new_value': {'id': '19', 'source': 'i v 116', 'target': 'ram: 2000b832 o 44', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '19', 'source': 'i v 116', 'target': 'ram: 2000baa6 o 44', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][127]": {'new_value': {'id': 'ram: 2000b872 o 79', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bafe v 609', 'Name': 'r5', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][101]": {'new_value': {'id': '102', 'source': 'ram: 2000b862 o 186', 'target': 'ram: 2000b862 v 481', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '102', 'source': 'ram: 2000bac4 v 379', 'target': 'ram: 2000bae4 o 334', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][153]": {'new_value': {'id': '154', 'source': 'i v 1111', 'target': 'ram: 2000b876 o 87', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '154', 'source': 'ram: 2000bafa v 1563', 'target': 'ram: 2000bb04 o 539', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][146]": {'new_value': {'id': '147', 'source': 'ram: 2000b870 v 1207', 'target': 'ram: 2000b872 o 408', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '147', 'source': 'ram: 2000bb02 v 649', 'target': 'ram: 2000bb02 o 258', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][47]": {'new_value': {'id': '48', 'source': 'ram: 2000b846 v 373', 'target': 'ram: 2000b848 o 151', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '48', 'source': 'i v 380', 'target': 'ram: 2000bac4 o 148', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][15]": {'new_value': {'id': '16', 'source': 'i v 1273', 'target': 'ram: 2000b830 o 390', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '16', 'source': 'i v 1701', 'target': 'ram: 2000baa4 o 512', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][181]": {'new_value': {'id': 'ram: 2000b888 o 119', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb0e v 194', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][17]": {'new_value': {'id': '18', 'source': 'i v 1273', 'target': 'ram: 2000b832 o 44', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '18', 'source': 'i v 1701', 'target': 'ram: 2000baa6 o 44', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][87]": {'new_value': {'id': '88', 'source': 'ram: 2000b858 v 464', 'target': 'ram: 2000b85a o 276', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '88', 'source': 'ram: 2000bade v 511', 'target': 'ram: 2000bae0 o 209', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][170]": {'new_value': {'id': '171', 'source': 'i v 274', 'target': 'ram: 2000b880 o 106', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '171', 'source': 'ram: 2000bb06 o 538', 'target': 'ram: 2000bb06 v 1584', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][106]": {'new_value': {'id': '107', 'source': 'ram: 2000b866 v 1140', 'target': 'ram: 2000b864 o 402', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '107', 'source': 'ram: 2000bae4 o 521', 'target': 'ram: 2000bae4 v 1533', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][75]": {'new_value': {'id': 'ram: 2000b856 v 452', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bad6 v 474', 'Name': 'unique: 00085000', 'VertexType': 'Unique'
+            }
+        },
+        "root['edges'][88]": {'new_value': {'id': '89', 'source': 'ram: 2000b85a o 276', 'target': 'ram: 2000b85a v 748', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '89', 'source': 'ram: 2000bacc v 1493', 'target': 'ram: 2000bae0 o 519', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][21]": {'new_value': {'id': 'ram: 2000b832 v 114', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000baa6 v 114', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][164]": {'new_value': {'id': 'ram: 2000b880 v 1159', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bb06 v 1584', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['edges'][204]": {'new_value': {'id': '205', 'source': 'i v 569', 'target': 'ram: 2000b890 o 36', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '205', 'source': 'ram: 2000bb16 o 516', 'target': 'ram: 2000bb16 v 1518', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][38]": {'new_value': {'id': 'i v 165', 'Name': 'ram: 2000b85a', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bab4 o 58', 'Name': 'BRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][98]": {'new_value': {'id': 'i v 482', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bae2 o 212', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][201]": {'new_value': {'id': '202', 'source': 'ram: 2000b88a o 379', 'target': 'ram: 2000b88a v 1089', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '202', 'source': 'ram: 2000bb16 v 238', 'target': 'ram: 2000bb16 o 94', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][91]": {'new_value': {'id': 'ram: 2000b85a o 407', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bade v 511', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][3]": {'new_value': {'id': '4', 'source': 'i v 1273', 'target': 'ram: 2000b828 o 12', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '4', 'source': 'i v 1701', 'target': 'ram: 2000ba9c o 12', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][0]": {'new_value': {'id': 'ram: 2000b824 o 7', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000ba98 o 7', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][137]": {'new_value': {'id': '138', 'source': 'ram: 2000b872 v 699', 'target': 'ram: 2000b872 o 80', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '138', 'source': 'ram: 2000baf8 v 1590', 'target': 'ram: 2000bafa o 532', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][72]": {'new_value': {'id': '73', 'source': 'ram: 2000b854 v 435', 'target': 'ram: 2000b856 o 176', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '73', 'source': 'ram: 2000bad8 o 192', 'target': 'ram: 2000bad8 v 487', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][168]": {'new_value': {'id': 'ram: 2000b882 o 109', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb0a o 72', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][4]": {'new_value': {'id': '5', 'source': 'ram: 2000b828 o 12', 'target': 'ram: 2000b828 v 33', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '5', 'source': 'ram: 2000ba9c o 12', 'target': 'ram: 2000ba9c v 33', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][56]": {'new_value': {'id': '57', 'source': 'i v 413', 'target': 'ram: 2000b84e o 159', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '57', 'source': 'ram: 2000bae4 v 1581', 'target': 'ram: 2000bacc o 534', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][81]": {'new_value': {'id': 'ram: 2000b858 v 464', 'Name': 'r5', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'i v 489', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][40]": {'new_value': {'id': '41', 'source': 'ram: 2000b842 o 387', 'target': 'ram: 2000b842 v 1143', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '41', 'source': 'i v 378', 'target': 'ram: 2000bac0 o 147', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][16]": {'new_value': {'id': 'i v 1103', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 1436', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][191]": {'new_value': {'id': 'ram: 2000b890 o 36', 'Name': 'RETURN', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb16 o 93', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][52]": {'new_value': {'id': '53', 'source': 'ram: 2000b84c o 155', 'target': 'ram: 2000b84c v 401', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '53', 'source': 'ram: 2000ba98 v 20', 'target': 'ram: 2000bacc o 173', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][190]": {'new_value': {'id': '191', 'source': 'i v 1273', 'target': 'ram: 2000b888 o 117', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '191', 'source': 'ram: 2000bb10 o 79', 'target': 'ram: 2000bb10 v 203', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][72]": {'new_value': {'id': 'ram: 2000b854 v 435', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'i v 466', 'Name': 'ram: 2000bae2', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][29]": {'new_value': {'id': '30', 'source': 'ram: 2000b836 o 48', 'target': 'ram: 2000b836 v 125', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '30', 'source': 'i v 1458', 'target': 'ram: 2000bab0 o 57', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][34]": {'new_value': {'id': '35', 'source': 'i v 165', 'target': 'ram: 2000b83c o 64', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '35', 'source': 'i v 148', 'target': 'ram: 2000bab4 o 58', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][80]": {'new_value': {'id': 'i v 466', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bad8 o 192', 'Name': 'INT_EQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][75]": {'new_value': {'id': '76', 'source': 'ram: 2000b85a v 748', 'target': 'ram: 2000b858 o 179', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '76', 'source': 'i v 1701', 'target': 'ram: 2000badc o 197', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][51]": {'new_value': {'id': '52', 'source': 'ram: 2000b84c v 398', 'target': 'ram: 2000b84c o 155', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '52', 'source': 'ram: 2000bae4 v 903', 'target': 'ram: 2000bacc o 173', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][19]": {'new_value': {'id': 'ram: 2000b832 o 44', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baa6 o 44', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][55]": {'new_value': {'id': '56', 'source': 'ram: 2000b84c v 404', 'target': 'ram: 2000b84e o 159', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '56', 'source': 'ram: 2000bacc o 507', 'target': 'ram: 2000bacc v 1493', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][129]": {'new_value': {'id': 'ram: 2000b872 v 201', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000baf8 o 524', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][85]": {'new_value': {'id': 'i v 168', 'Name': 'const: 0000000c', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000badc o 197', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][99]": {'new_value': {'id': '100', 'source': 'ram: 2000b85c v 172', 'target': 'ram: 2000b85e o 77', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '100', 'source': 'ram: 2000bae4 v 392', 'target': 'ram: 2000bae4 o 155', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][59]": {'new_value': {'id': '60', 'source': 'ram: 2000b84e v 411', 'target': 'ram: 2000b850 o 163', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '60', 'source': 'i v 451', 'target': 'ram: 2000bad0 o 177', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][61]": {'new_value': {'id': '62', 'source': 'i v 425', 'target': 'ram: 2000b852 o 164', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '62', 'source': 'i v 466', 'target': 'ram: 2000bad2 o 184', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][128]": {'new_value': {'id': '129', 'source': 'ram: 2000b866 v 1140', 'target': 'ram: 2000b870 o 401', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '129', 'source': 'ram: 2000bafa v 1487', 'target': 'ram: 2000baf8 o 524', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][25]": {'new_value': {'id': '26', 'source': 'i v 123', 'target': 'ram: 2000b834 o 47', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '26', 'source': 'i v 123', 'target': 'ram: 2000baa8 o 47', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][112]": {'new_value': {'id': '113', 'source': 'ram: 2000b864 v 757', 'target': 'ram: 2000b866 o 195', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '113', 'source': 'ram: 2000bae6 o 156', 'target': 'ram: 2000bae6 v 398', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][57]": {'new_value': {'id': '58', 'source': 'ram: 2000b84e o 159', 'target': 'ram: 2000b84e v 411', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '58', 'source': 'ram: 2000bacc o 534', 'target': 'ram: 2000bacc v 1571', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][63]": {'new_value': {'id': '64', 'source': 'ram: 2000b852 v 423', 'target': 'ram: 2000b852 o 165', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '64', 'source': 'ram: 2000bacc v 1571', 'target': 'ram: 2000bad6 o 187', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][42]": {'new_value': {'id': '43', 'source': 'ram: 2000b842 o 406', 'target': 'ram: 2000b842 v 1199', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '43', 'source': 'i v 1459', 'target': 'ram: 2000bac0 o 147', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][89]": {'new_value': {'id': '90', 'source': 'ram: 2000b830 v 1150', 'target': 'ram: 2000b85a o 399', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '90', 'source': 'ram: 2000bae0 o 519', 'target': 'ram: 2000bae0 v 1527', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][132]": {'new_value': {'id': 'ram: 2000b872 o 262', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baf8 o 540', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][147]": {'new_value': {'id': 'i v 227', 'Name': 'const: 00000004', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 150', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][122]": {'new_value': {'id': '123', 'source': 'ram: 2000b86e o 214', 'target': 'ram: 2000b86e v 550', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '123', 'source': 'i v 581', 'target': 'ram: 2000baf6 o 229', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][155]": {'new_value': {'id': 'ram: 2000b87a v 234', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bb06 v 161', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][173]": {'new_value': {'id': 'i v 286', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 187', 'Name': 'const: 00000004', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][171]": {'new_value': {'id': '172', 'source': 'ram: 2000b880 o 106', 'target': 'ram: 2000b880 v 272', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '172', 'source': 'i v 1701', 'target': 'ram: 2000bb0a o 71', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][60]": {'new_value': {'id': 'ram: 2000b84c v 404', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bae4 v 903', 'Name': 'r5', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][125]": {'new_value': {'id': 'ram: 2000b870 o 409', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baf6 v 580', 'Name': 'r5', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][38]": {'new_value': {'id': '39', 'source': 'ram: 2000b842 o 140', 'target': 'ram: 2000b842 v 682', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '39', 'source': 'i v 354', 'target': 'ram: 2000bab8 o 137', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][187]": {'new_value': {'id': '188', 'source': 'ram: 2000b87c v 243', 'target': 'ram: 2000b884 o 111', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '188', 'source': 'ram: 2000bb0e o 76', 'target': 'ram: 2000bb0e v 194', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][193]": {'new_value': {'id': '194', 'source': 'ram: 2000b888 v 302', 'target': 'ram: 2000b888 o 119', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '194', 'source': 'ram: 2000bb14 o 91', 'target': 'ram: 2000bb14 v 232', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][117]": {'new_value': {'id': '118', 'source': 'ram: 2000b864 v 757', 'target': 'ram: 2000b86a o 198', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '118', 'source': 'i v 1461', 'target': 'ram: 2000baf2 o 228', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][168]": {'new_value': {'id': '169', 'source': 'ram: 2000b87c o 94', 'target': 'ram: 2000b87c v 243', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '169', 'source': 'ram: 2000bb04 v 1587', 'target': 'ram: 2000bb06 o 538', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][155]": {'new_value': {'id': '156', 'source': 'ram: 2000b876 o 392', 'target': 'ram: 2000b876 v 1156', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '156', 'source': 'i v 1701', 'target': 'ram: 2000bb06 o 64', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][162]": {'new_value': {'id': 'i v 1112', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bb06 o 522', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][118]": {'new_value': {'id': '119', 'source': 'i v 512', 'target': 'ram: 2000b86a o 198', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '119', 'source': 'ram: 2000baa4 v 1506', 'target': 'ram: 2000baf2 o 504', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][105]": {'new_value': {'id': '106', 'source': 'ram: 2000b830 v 1150', 'target': 'ram: 2000b864 o 402', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '106', 'source': 'ram: 2000bae2 v 1529', 'target': 'ram: 2000bae4 o 521', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][82]": {'new_value': {'id': 'ram: 2000b858 o 398', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bad8 v 487', 'Name': 'tmpZR', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][108]": {'new_value': {'id': 'ram: 2000b864 v 1210', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }, 'old_value': {'id': 'ram: 2000bae4 o 334', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][3]": {'new_value': {'id': 'ram: 2000b824 v 20', 'Name': 'mult_addr', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000ba98 v 20', 'Name': 'mult_addr', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][190]": {'new_value': {'id': 'ram: 2000b88a v 1147', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bb14 v 1515', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][135]": {'new_value': {'id': 'ram: 2000b872 v 1153', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bafa o 238', 'Name': 'CALL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][1]": {'new_value': {'id': '2', 'source': 'i v 1127', 'target': 'ram: 2000b824 o 7', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '2', 'source': 'i v 1467', 'target': 'ram: 2000ba98 o 7', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][182]": {'new_value': {'id': '183', 'source': 'ram: 2000b882 o 394', 'target': 'ram: 2000b882 v 1162', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '183', 'source': 'ram: 2000bb0c o 74', 'target': 'ram: 2000bb0c v 188', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][117]": {'new_value': {'id': 'ram: 2000b86e v 550', 'Name': 'unique: 00076f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'i v 1443', 'Name': 'const: 2000bcf8', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][63]": {'new_value': {'id': 'ram: 2000b84e v 411', 'Name': 'tmpZR', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bae4 v 1533', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][102]": {'new_value': {'id': 'ram: 2000b864 v 757', 'Name': 'r5', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bae2 v 1529', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][124]": {'new_value': {'id': 'ram: 2000b870 v 1183', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'i v 581', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][26]": {'new_value': {'id': 'ram: 2000b834 v 120', 'Name': 'unique: 00088d80', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000baa8 v 120', 'Name': 'unique: 00088c80', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][40]": {'new_value': {'id': 'i v 363', 'Name': 'ram: 2000b996', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bab6 o 127', 'Name': 'INT_LESS', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][58]": {'new_value': {'id': 'ram: 2000b84c v 401', 'Name': 'unique: 0008a580', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bacc o 173', 'Name': 'CALL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][163]": {'new_value': {'id': '164', 'source': 'ram: 2000b87a o 90', 'target': 'ram: 2000b87a v 231', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '164', 'source': 'ram: 2000bb06 v 1536', 'target': 'ram: 2000bb06 o 513', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][111]": {'new_value': {'id': '112', 'source': 'i v 503', 'target': 'ram: 2000b866 o 195', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '112', 'source': 'ram: 2000bae4 v 395', 'target': 'ram: 2000bae6 o 156', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][85]": {'new_value': {'id': '86', 'source': 'ram: 2000b85a o 66', 'target': 'ram: 2000b85a v 169', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '86', 'source': 'ram: 2000bae0 o 208', 'target': 'ram: 2000bae0 v 528', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][143]": {'new_value': {'id': '144', 'source': 'ram: 2000b870 v 1183', 'target': 'ram: 2000b872 o 400', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '144', 'source': 'i v 1468', 'target': 'ram: 2000bb02 o 257', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][10]": {'new_value': {'id': 'ram: 2000b82a o 15', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000ba9e o 15', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][35]": {'new_value': {'id': 'i v 154', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bab0 o 535', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][157]": {'new_value': {'id': '158', 'source': 'i v 227', 'target': 'ram: 2000b878 o 88', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '158', 'source': 'ram: 2000bb06 o 64', 'target': 'ram: 2000bb06 v 161', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][49]": {'new_value': {'id': 'ram: 2000b846 o 144', 'Name': 'INT_SLESS', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bac0 o 506', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][80]": {'new_value': {'id': '81', 'source': 'ram: 2000b858 o 398', 'target': 'ram: 2000b858 v 1173', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '81', 'source': 'ram: 2000badc v 502', 'target': 'ram: 2000bade o 201', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][26]": {'new_value': {'id': '27', 'source': 'ram: 2000b834 v 120', 'target': 'ram: 2000b834 o 47', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '27', 'source': 'ram: 2000baa8 v 120', 'target': 'ram: 2000baa8 o 47', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][158]": {'new_value': {'id': 'ram: 2000b880 o 106', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb06 o 312', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][110]": {'new_value': {'id': '111', 'source': 'ram: 2000b864 o 410', 'target': 'ram: 2000b864 v 1210', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '111', 'source': 'ram: 2000bae4 v 903', 'target': 'ram: 2000bae6 o 156', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][136]": {'new_value': {'id': '137', 'source': 'ram: 2000b872 v 201', 'target': 'ram: 2000b872 o 80', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '137', 'source': 'ram: 2000bafa o 505', 'target': 'ram: 2000bafa v 1487', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][57]": {'new_value': {'id': 'ram: 2000b84c o 155', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 391', 'Name': 'ram: 2000bae4', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][9]": {'new_value': {'id': '10', 'source': 'ram: 2000b82a v 38', 'target': 'ram: 2000b82a o 15', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '10', 'source': 'ram: 2000ba9e v 38', 'target': 'ram: 2000ba9e o 15', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][36]": {'new_value': {'id': '37', 'source': 'ram: 2000b85a v 748', 'target': 'ram: 2000b842 o 140', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '37', 'source': 'i v 1726', 'target': 'ram: 2000bab6 o 127', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][84]": {'new_value': {'id': '85', 'source': 'ram: 2000b85a v 166', 'target': 'ram: 2000b85a o 66', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '85', 'source': 'i v 530', 'target': 'ram: 2000bae0 o 208', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][93]": {'new_value': {'id': 'ram: 2000b85c o 67', 'Name': 'INT_LESS', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 530', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][45]": {'new_value': {'id': 'ram: 2000b842 v 1143', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bac0 o 147', 'Name': 'CALL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][89]": {'new_value': {'id': 'ram: 2000b85a o 276', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000badc v 502', 'Name': 'r1', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][11]": {'new_value': {'id': '12', 'source': 'i v 110', 'target': 'ram: 2000b830 o 42', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '12', 'source': 'i v 110', 'target': 'ram: 2000baa4 o 42', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][179]": {'new_value': {'id': 'i v 304', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bb0e v 191', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][154]": {'new_value': {'id': 'ram: 2000b87a o 91', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 163', 'Name': 'const: 00000014', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][177]": {'new_value': {'id': 'ram: 2000b884 v 1165', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bb0e o 75', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][74]": {'new_value': {'id': '75', 'source': 'ram: 2000b856 o 397', 'target': 'ram: 2000b856 v 1171', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '75', 'source': 'ram: 2000bad8 v 487', 'target': 'ram: 2000bada o 196', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][165]": {'new_value': {'id': 'ram: 2000b882 o 108', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb0a o 71', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][208]": {'new_value': {'id': '209', 'source': 'ram: 2000b890 o 378', 'target': 'ram: 2000b890 v 1088', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '209', 'source': 'ram: 2000bb18 v 244', 'target': 'ram: 2000bb18 o 96', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][56]": {'new_value': {'id': 'ram: 2000b84c v 398', 'Name': 'unique: 00085000', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bac6 o 153', 'Name': 'BRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][14]": {'new_value': {'id': '15', 'source': 'i v 1103', 'target': 'ram: 2000b830 o 43', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '15', 'source': 'i v 1436', 'target': 'ram: 2000baa4 o 43', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][66]": {'new_value': {'id': 'ram: 2000b852 o 164', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae4 v 1581', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['nodes'][97]": {'new_value': {'id': 'ram: 2000b862 o 186', 'Name': 'COPY', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae0 v 1527', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][47]": {'new_value': {'id': 'ram: 2000b85a v 1201', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }, 'old_value': {'id': 'i v 1439', 'Name': 'const: 2000bce4', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][31]": {'new_value': {'id': 'ram: 2000b836 v 125', 'Name': 'tmpCY', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'i v 1437', 'Name': 'const: 2000bcd0', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][103]": {'new_value': {'id': 'ram: 2000b864 o 402', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae4 o 154', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][119]": {'new_value': {'id': '120', 'source': 'ram: 2000b86a o 198', 'target': 'ram: 2000b86a v 510', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '120', 'source': 'ram: 2000baf2 o 504', 'target': 'ram: 2000baf2 v 1484', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][105]": {'new_value': {'id': 'ram: 2000b864 v 1186', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bae4 v 392', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['edges'][73]": {'new_value': {'id': '74', 'source': 'ram: 2000b842 v 1143', 'target': 'ram: 2000b856 o 397', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '74', 'source': 'i v 497', 'target': 'ram: 2000bada o 196', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][150]": {'new_value': {'id': '151', 'source': 'i v 221', 'target': 'ram: 2000b876 o 86', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '151', 'source': 'ram: 2000bafa v 1487', 'target': 'ram: 2000bb04 o 523', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][95]": {'new_value': {'id': 'ram: 2000b85e o 77', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bae0 o 209', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][60]": {'new_value': {'id': '61', 'source': 'i v 1273', 'target': 'ram: 2000b852 o 164', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '61', 'source': 'ram: 2000bad0 o 177', 'target': 'ram: 2000bad0 v 449', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][174]": {'new_value': {'id': 'ram: 2000b884 v 284', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bb0c v 185', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['edges'][188]": {'new_value': {'id': '189', 'source': 'ram: 2000b882 v 1162', 'target': 'ram: 2000b884 o 395', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '189', 'source': 'ram: 2000bb0c v 188', 'target': 'ram: 2000bb10 o 79', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][7]": {'new_value': {'id': 'ram: 2000b82a o 14', 'Name': 'INT_EQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000ba9e o 14', 'Name': 'INT_EQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][192]": {'new_value': {'id': 'i v 569', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 240', 'Name': 'const: 0000001c', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][146]": {'new_value': {'id': 'ram: 2000b878 o 88', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb04 o 59', 'Name': 'COPY', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][116]": {'new_value': {'id': '117', 'source': 'ram: 2000b866 o 405', 'target': 'ram: 2000b866 v 1195', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '117', 'source': 'i v 1443', 'target': 'ram: 2000baf2 o 228', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][131]": {'new_value': {'id': '132', 'source': 'ram: 2000b866 v 1195', 'target': 'ram: 2000b870 o 409', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '132', 'source': 'ram: 2000bafa v 1563', 'target': 'ram: 2000baf8 o 540', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][104]": {'new_value': {'id': 'ram: 2000b866 v 1140', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'i v 394', 'Name': 'const: 0000000c', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][12]": {'new_value': {'id': '13', 'source': 'ram: 2000b830 o 42', 'target': 'ram: 2000b830 v 108', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '13', 'source': 'ram: 2000baa4 o 42', 'target': 'ram: 2000baa4 v 108', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][42]": {'new_value': {'id': 'ram: 2000b842 v 682', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bab6 v 328', 'Name': 'tmpCY', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][188]": {'new_value': {'id': 'ram: 2000b88a o 379', 'Name': 'PIECE', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 1448', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][184]": {'new_value': {'id': 'ram: 2000b888 v 1168', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bb14 o 91', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][195]": {'new_value': {'id': 'i v 1116', 'Name': 'const:ffffffff', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 1449', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][83]": {'new_value': {'id': '84', 'source': 'ram: 2000b85a o 65', 'target': 'ram: 2000b85a v 166', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '84', 'source': 'i v 1701', 'target': 'ram: 2000bae0 o 208', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][183]": {'new_value': {'id': '184', 'source': 'i v 1273', 'target': 'ram: 2000b884 o 110', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '184', 'source': 'i v 1701', 'target': 'ram: 2000bb0e o 75', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][27]": {'new_value': {'id': '28', 'source': 'ram: 2000b832 v 117', 'target': 'ram: 2000b836 o 48', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '28', 'source': 'i v 147', 'target': 'ram: 2000bab0 o 57', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][31]": {'new_value': {'id': '32', 'source': 'ram: 2000b836 v 125', 'target': 'ram: 2000b838 o 58', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '32', 'source': 'ram: 2000bab0 o 508', 'target': 'ram: 2000bab0 v 1496', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][92]": {'new_value': {'id': 'i v 1066', 'Shape': 'Triangle Down', 'Name': 'r3', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bae0 o 208', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][172]": {'new_value': {'id': '173', 'source': 'ram: 2000b880 v 272', 'target': 'ram: 2000b880 o 107', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '173', 'source': 'i v 181', 'target': 'ram: 2000bb0a o 71', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][197]": {'new_value': {'id': 'ram: 2000b890 v 1145', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bb16 v 1518', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['nodes'][178]": {'new_value': {'id': 'ram: 2000b888 o 117', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 193', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][43]": {'new_value': {'id': '44', 'source': 'ram: 2000b842 v 682', 'target': 'ram: 2000b846 o 144', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '44', 'source': 'ram: 2000baa4 v 1506', 'target': 'ram: 2000bac0 o 506', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][126]": {'new_value': {'id': 'ram: 2000b870 v 1207', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }, 'old_value': {'id': 'ram: 2000baf8 o 337', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][181]": {'new_value': {'id': '182', 'source': 'ram: 2000b880 v 1159', 'target': 'ram: 2000b882 o 394', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '182', 'source': 'ram: 2000bb0c v 185', 'target': 'ram: 2000bb0c o 74', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][6]": {'new_value': {'id': '7', 'source': 'i v 1102', 'target': 'ram: 2000b82a o 14', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '7', 'source': 'i v 1435', 'target': 'ram: 2000ba9e o 14', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][53]": {'new_value': {'id': '54', 'source': 'ram: 2000b84c v 401', 'target': 'ram: 2000b84c o 156', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '54', 'source': 'ram: 2000bacc o 173', 'target': 'ram: 2000bacc v 797', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][132]": {'new_value': {'id': '133', 'source': 'ram: 2000b870 o 409', 'target': 'ram: 2000b870 v 1207', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '133', 'source': 'ram: 2000baf8 o 540', 'target': 'ram: 2000baf8 v 1590', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][33]": {'new_value': {'id': '34', 'source': 'ram: 2000b83a o 59', 'target': 'ram: 2000b83a v 153', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '34', 'source': 'ram: 2000bab0 o 535', 'target': 'ram: 2000bab0 v 1575', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][34]": {'new_value': {'id': 'ram: 2000b83a o 59', 'Name': 'COPY', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bab0 v 1496', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][134]": {'new_value': {'id': '135', 'source': 'i v 203', 'target': 'ram: 2000b872 o 79', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '135', 'source': 'ram: 2000baf8 v 912', 'target': 'ram: 2000bafa o 238', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][150]": {'new_value': {'id': 'ram: 2000b878 v 228', 'Name': 'r1', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bb04 v 1539', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][71]": {'new_value': {'id': '72', 'source': 'ram: 2000b856 v 452', 'target': 'ram: 2000b856 o 176', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '72', 'source': 'i v 489', 'target': 'ram: 2000bad8 o 192', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][87]": {'new_value': {'id': 'ram: 2000b85a o 66', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000badc v 499', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['edges'][93]": {'new_value': {'id': '94', 'source': 'ram: 2000b842 v 1199', 'target': 'ram: 2000b85a o 407', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '94', 'source': 'ram: 2000bacc v 1493', 'target': 'ram: 2000bae2 o 520', 'EdgeType': 'Default', 'Weight': '2'
+            }
+        },
+        "root['edges'][184]": {'new_value': {'id': '185', 'source': 'i v 286', 'target': 'ram: 2000b884 o 110', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '185', 'source': 'i v 193', 'target': 'ram: 2000bb0e o 75', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][54]": {'new_value': {'id': '55', 'source': 'ram: 2000b84c o 156', 'target': 'ram: 2000b84c v 404', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '55', 'source': 'ram: 2000bae4 v 1533', 'target': 'ram: 2000bacc o 507', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][127]": {'new_value': {'id': '128', 'source': 'ram: 2000b830 v 1150', 'target': 'ram: 2000b870 o 401', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '128', 'source': 'ram: 2000baf2 v 1484', 'target': 'ram: 2000baf8 o 524', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][187]": {'new_value': {'id': 'ram: 2000b88a v 1089', 'Name': 'VARIABLE: 00000000', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bb14 o 92', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][130]": {'new_value': {'id': 'ram: 2000b872 o 80', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bafa v 1487', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][161]": {'new_value': {'id': '162', 'source': 'i v 1273', 'target': 'ram: 2000b87a o 90', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '162', 'source': 'ram: 2000bae4 v 395', 'target': 'ram: 2000bb06 o 312', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][8]": {'new_value': {'id': 'i v 1102', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 1435', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][6]": {'new_value': {'id': 'ram: 2000b828 v 33', 'Name': 'unique: 0008a380', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000ba9c v 33', 'Name': 'unique: 0008a380', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][196]": {'new_value': {'id': 'ram: 2000b890 o 388', 'Name': 'COPY', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb16 o 516', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][192]": {'new_value': {'id': '193', 'source': 'ram: 2000b888 o 117', 'target': 'ram: 2000b888 v 302', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '193', 'source': 'i v 234', 'target': 'ram: 2000bb14 o 91', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][126]": {'new_value': {'id': '127', 'source': 'ram: 2000b870 o 216', 'target': 'ram: 2000b870 v 555', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '127', 'source': 'ram: 2000baf8 o 337', 'target': 'ram: 2000baf8 v 912', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][37]": {'new_value': {'id': '38', 'source': 'ram: 2000b824 v 20', 'target': 'ram: 2000b842 o 140', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '38', 'source': 'ram: 2000bab6 o 127', 'target': 'ram: 2000bab6 v 328', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][110]": {'new_value': {'id': 'i v 503', 'Name': 'ram: 20008f48', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bae4 o 537', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][30]": {'new_value': {'id': '31', 'source': 'i v 151', 'target': 'ram: 2000b838 o 58', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '31', 'source': 'ram: 2000baa4 v 1506', 'target': 'ram: 2000bab0 o 508', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][167]": {'new_value': {'id': 'ram: 2000b882 v 278', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }, 'old_value': {'id': 'ram: 2000bb0a v 179', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][62]": {'new_value': {'id': 'i v 413', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bacc o 507', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][120]": {'new_value': {'id': 'ram: 2000b870 o 216', 'Name': 'COPY', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baf2 v 1484', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][19]": {'new_value': {'id': '20', 'source': 'ram: 2000b832 o 44', 'target': 'ram: 2000b832 v 114', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '20', 'source': 'ram: 2000baa6 o 44', 'target': 'ram: 2000baa6 v 114', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][104]": {'new_value': {'id': '105', 'source': 'ram: 2000b864 o 279', 'target': 'ram: 2000b864 v 757', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '105', 'source': 'ram: 2000bac0 v 1490', 'target': 'ram: 2000bae4 o 521', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][179]": {'new_value': {'id': '180', 'source': 'ram: 2000b882 v 278', 'target': 'ram: 2000b882 o 109', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '180', 'source': 'i v 187', 'target': 'ram: 2000bb0c o 73', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][54]": {'new_value': {'id': 'ram: 2000b84c o 154', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 380', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][107]": {'new_value': {'id': '108', 'source': 'ram: 2000b864 o 402', 'target': 'ram: 2000b864 v 1186', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '108', 'source': 'ram: 2000bac0 v 1567', 'target': 'ram: 2000bae4 o 537', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][152]": {'new_value': {'id': '153', 'source': 'ram: 2000b876 v 219', 'target': 'ram: 2000b876 o 87', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '153', 'source': 'ram: 2000bab0 v 1575', 'target': 'ram: 2000bb04 o 539', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][128]": {'new_value': {'id': 'i v 203', 'Name': 'const: 00000014', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000baf8 v 912', 'Name': 'r5', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][52]": {'new_value': {'id': 'ram: 2000b848 o 151', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bac0 v 1567', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['edges'][142]": {'new_value': {'id': '143', 'source': 'ram: 2000b872 o 391', 'target': 'ram: 2000b872 v 1153', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '143', 'source': 'ram: 2000bafe v 609', 'target': 'ram: 2000bb02 o 257', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][136]": {'new_value': {'id': 'ram: 2000b872 o 400', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 602', 'Name': 'ram: 2000903c', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][98]": {'new_value': {'id': '99', 'source': 'i v 198', 'target': 'ram: 2000b85e o 77', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '99', 'source': 'ram: 2000bae4 o 154', 'target': 'ram: 2000bae4 v 392', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][115]": {'new_value': {'id': '116', 'source': 'ram: 2000b864 v 1210', 'target': 'ram: 2000b866 o 405', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '116', 'source': 'i v 579', 'target': 'ram: 2000baf2 o 228', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][69]": {'new_value': {'id': 'ram: 2000b852 o 165', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 451', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][191]": {'new_value': {'id': '192', 'source': 'i v 304', 'target': 'ram: 2000b888 o 117', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '192', 'source': 'i v 1701', 'target': 'ram: 2000bb14 o 91', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][83]": {'new_value': {'id': 'ram: 2000b858 v 1173', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000bada o 196', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][18]": {'new_value': {'id': 'ram: 2000b830 v 1150', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000baa4 v 1506', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+            }
+        },
+        "root['edges'][210]": {'new_value': {'id': '211', 'source': 'ram: 2000b890 o 388', 'target': 'ram: 2000b890 v 1145', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '211', 'source': 'ram: 2000bb16 v 1518', 'target': 'ram: 2000bb18 o 517', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][166]": {'new_value': {'id': '167', 'source': 'ram: 2000b878 v 228', 'target': 'ram: 2000b87c o 94', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '167', 'source': 'ram: 2000bae4 v 1533', 'target': 'ram: 2000bb06 o 522', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][185]": {'new_value': {'id': 'ram: 2000b88a o 134', 'Name': 'RETURN', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 234', 'Name': 'const: 00000008', 'VertexType': 'Constant'
+            }
+        },
+        "root['edges'][109]": {'new_value': {'id': '110', 'source': 'ram: 2000b866 v 1195', 'target': 'ram: 2000b864 o 410', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '110', 'source': 'ram: 2000bae4 o 537', 'target': 'ram: 2000bae4 v 1581', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][169]": {'new_value': {'id': '170', 'source': 'i v 1273', 'target': 'ram: 2000b880 o 106', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '170', 'source': 'ram: 2000bae4 v 1581', 'target': 'ram: 2000bb06 o 538', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][134]": {'new_value': {'id': 'ram: 2000b872 v 1180', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'ram: 2000baf8 v 1590', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['nodes'][71]": {'new_value': {'id': 'ram: 2000b854 o 168', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bad2 o 184', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][88]": {'new_value': {'id': 'ram: 2000b85a v 169', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000badc o 198', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][148]": {'new_value': {'id': '149', 'source': 'ram: 2000b872 o 408', 'target': 'ram: 2000b872 v 1204', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '149', 'source': 'ram: 2000bb04 o 59', 'target': 'ram: 2000bb04 v 149', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][94]": {'new_value': {'id': 'ram: 2000b85c v 172', 'Name': 'tmpCY', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bae0 v 528', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][90]": {'new_value': {'id': 'ram: 2000b85a o 399', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bade o 201', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][142]": {'new_value': {'id': 'ram: 2000b876 o 87', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 1468', 'Name': 'const: 00000032', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][169]": {'new_value': {'id': 'i v 1113', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 1447', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][157]": {'new_value': {'id': 'ram: 2000b87c v 243', 'Name': 'r0', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bb06 v 822', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][73]": {'new_value': {'id': 'ram: 2000b856 o 175', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bad6 o 187', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][12]": {'new_value': {'id': 'ram: 2000b830 o 42', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000baa4 o 42', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][133]": {'new_value': {'id': 'ram: 2000b872 o 391', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bafa v 1563', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['nodes'][170]": {'new_value': {'id': 'ram: 2000b882 o 394', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb0a o 514', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][4]": {'new_value': {'id': 'ram: 2000b828 o 12', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000ba9c o 12', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][84]": {'new_value': {'id': 'ram: 2000b85a o 65', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'i v 497', 'Name': 'ram: 2000bae2', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][50]": {'new_value': {'id': '51', 'source': 'ram: 2000b84c o 154', 'target': 'ram: 2000b84c v 398', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '51', 'source': 'i v 439', 'target': 'ram: 2000bacc o 173', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][2]": {'new_value': {'id': '3', 'source': 'ram: 2000b824 o 7', 'target': 'ram: 2000b824 v 20', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '3', 'source': 'ram: 2000ba98 o 7', 'target': 'ram: 2000ba98 v 20', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][144]": {'new_value': {'id': 'ram: 2000b876 o 392', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb02 o 258', 'Name': 'CBRANCH', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][103]": {'new_value': {'id': '104', 'source': 'ram: 2000b86a v 510', 'target': 'ram: 2000b864 o 279', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '104', 'source': 'ram: 2000bae4 o 334', 'target': 'ram: 2000bae4 v 903', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][156]": {'new_value': {'id': 'ram: 2000b87c o 94', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb06 o 65', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][76]": {'new_value': {'id': 'ram: 2000b856 o 176', 'Name': 'STORE ram', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bad6 o 188', 'Name': 'LOAD ram', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][139]": {'new_value': {'id': '140', 'source': 'ram: 2000b85a v 169', 'target': 'ram: 2000b872 o 262', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '140', 'source': 'ram: 2000baf8 v 912', 'target': 'ram: 2000bafe o 241', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][102]": {'new_value': {'id': '103', 'source': 'ram: 2000b862 v 481', 'target': 'ram: 2000b864 o 279', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '103', 'source': 'ram: 2000bae2 v 540', 'target': 'ram: 2000bae4 o 334', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][125]": {'new_value': {'id': '126', 'source': 'i v 556', 'target': 'ram: 2000b870 o 216', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '126', 'source': 'ram: 2000bafe v 609', 'target': 'ram: 2000baf8 o 337', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][101]": {'new_value': {'id': 'ram: 2000b86a v 510', 'Name': 'r5', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'ram: 2000bae2 o 520', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][141]": {'new_value': {'id': '142', 'source': 'ram: 2000b872 v 1180', 'target': 'ram: 2000b872 o 391', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '142', 'source': 'ram: 2000bafe o 241', 'target': 'ram: 2000bafe v 609', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][185]": {'new_value': {'id': '186', 'source': 'ram: 2000b884 o 110', 'target': 'ram: 2000b884 v 284', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '186', 'source': 'ram: 2000bb0e o 75', 'target': 'ram: 2000bb0e v 191', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][195]": {'new_value': {'id': '196', 'source': 'ram: 2000b884 v 1165', 'target': 'ram: 2000b888 o 396', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '196', 'source': 'i v 1448', 'target': 'ram: 2000bb14 o 92', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][145]": {'new_value': {'id': 'ram: 2000b876 v 1156', 'Name': 'ram: 2000b9c4', 'VertexType': 'Persistent'
+            }, 'old_value': {'id': 'i v 652', 'Name': 'ram: 2000baf8', 'VertexType': 'Default'
+            }
+        },
+        "root['nodes'][107]": {'new_value': {'id': 'ram: 2000b866 v 1195', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }, 'old_value': {'id': 'ram: 2000bae4 v 395', 'Name': 'r0', 'VertexType': 'Register'
+            }
+        },
+        "root['nodes'][137]": {'new_value': {'id': 'ram: 2000b872 o 408', 'Name': 'MULTIEQUAL', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bafa o 505', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][96]": {'new_value': {'id': 'i v 198', 'Name': 'ram: 2000b83e', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bae0 o 519', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][97]": {'new_value': {'id': '98', 'source': 'ram: 2000b85c o 67', 'target': 'ram: 2000b85c v 172', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '98', 'source': 'i v 394', 'target': 'ram: 2000bae4 o 154', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][95]": {'new_value': {'id': '96', 'source': 'ram: 2000b85a v 748', 'target': 'ram: 2000b85c o 67', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '96', 'source': 'ram: 2000bae2 o 520', 'target': 'ram: 2000bae2 v 1529', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][45]": {'new_value': {'id': '46', 'source': 'ram: 2000b846 o 144', 'target': 'ram: 2000b846 v 373', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '46', 'source': 'i v 1401', 'target': 'ram: 2000bac0 o 533', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][37]": {'new_value': {'id': 'ram: 2000b83c o 64', 'Name': 'BRANCH', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bab0 v 1575', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }
+        },
+        "root['edges'][48]": {'new_value': {'id': '49', 'source': 'ram: 2000b842 v 1199', 'target': 'ram: 2000b84c o 154', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '49', 'source': 'ram: 2000bac4 o 148', 'target': 'ram: 2000bac4 v 379', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][203]": {'new_value': {'id': '204', 'source': 'ram: 2000b88a o 389', 'target': 'ram: 2000b88a v 1147', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '204', 'source': 'ram: 2000bb14 v 1515', 'target': 'ram: 2000bb16 o 516', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][28]": {'new_value': {'id': 'i v 123', 'Name': 'ram: 2000b870', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'i v 123', 'Name': 'ram: 2000bab6', 'VertexType': 'Default'
+            }
+        },
+        "root['edges'][91]": {'new_value': {'id': '92', 'source': 'ram: 2000b85a o 399', 'target': 'ram: 2000b85a v 1177', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '92', 'source': 'i v 542', 'target': 'ram: 2000bae2 o 212', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][160]": {'new_value': {'id': '161', 'source': 'ram: 2000b878 o 89', 'target': 'ram: 2000b878 v 228', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '161', 'source': 'ram: 2000bb04 v 149', 'target': 'ram: 2000bb06 o 312', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][193]": {'new_value': {'id': 'ram: 2000b890 v 1088', 'Name': 'VARIABLE: 00000000', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000bb16 v 238', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+            }
+        },
+        "root['nodes'][159]": {'new_value': {'id': 'i v 274', 'Name': 'const: 00000008', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'ram: 2000bb06 o 513', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][0]": {'new_value': {'id': '1', 'source': 'i v 1062', 'target': 'ram: 2000b824 o 7', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '1', 'source': 'i v 1397', 'target': 'ram: 2000ba98 o 7', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][138]": {'new_value': {'id': 'ram: 2000b872 v 1204', 'Name': 'Stack[
+                    -0x10
+                ]', 'VertexType': 'Address Tied'
+            }, 'old_value': {'id': 'ram: 2000bafa o 532', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['edges'][206]": {'new_value': {'id': '207', 'source': 'i v 1066', 'target': 'ram: 2000b890 o 378', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '207', 'source': 'i v 246', 'target': 'ram: 2000bb18 o 95', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][139]": {'new_value': {'id': 'ram: 2000b876 o 86', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bafe o 241', 'Name': 'INT_ADD', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][119]": {'new_value': {'id': 'i v 553', 'Name': 'ram: 2000b864', 'VertexType': 'Default'
+            }, 'old_value': {'id': 'ram: 2000baf2 o 504', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+            }
+        },
+        "root['nodes'][74]": {'new_value': {'id': 'i v 454', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+            }, 'old_value': {'id': 'i v 476', 'Name': 'const: 00000002', 'VertexType': 'Constant'
+            }
+        },
+        "root['nodes'][176]": {'new_value': {'id': 'ram: 2000b884 o 395', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+            }, 'old_value': {'id': 'ram: 2000bb0c v 188', 'Name': 'r1', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][165]": {'new_value': {'id': '166', 'source': 'ram: 2000b87a o 91', 'target': 'ram: 2000b87a v 234', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '166', 'source': 'ram: 2000bb04 v 1539', 'target': 'ram: 2000bb06 o 522', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][196]": {'new_value': {'id': '197', 'source': 'ram: 2000b888 o 396', 'target': 'ram: 2000b888 v 1168', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '197', 'source': 'ram: 2000bb0a v 1512', 'target': 'ram: 2000bb14 o 515', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][28]": {'new_value': {'id': '29', 'source': 'i v 1282', 'target': 'ram: 2000b836 o 48', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '29', 'source': 'i v 1437', 'target': 'ram: 2000bab0 o 57', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][5]": {'new_value': {'id': '6', 'source': 'ram: 2000b828 v 33', 'target': 'ram: 2000b82a o 14', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '6', 'source': 'ram: 2000ba9c v 33', 'target': 'ram: 2000ba9e o 14', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][41]": {'new_value': {'id': '42', 'source': 'ram: 2000b85a v 1201', 'target': 'ram: 2000b842 o 406', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '42', 'source': 'i v 1439', 'target': 'ram: 2000bac0 o 147', 'EdgeType': 'Default'
+            }
+        },
+        "root['nodes'][36]": {'new_value': {'id': 'ram: 2000b83a v 153', 'Name': 'r5', 'VertexType': 'Register'
+            }, 'old_value': {'id': 'i v 1401', 'Shape': 'Triangle Down', 'Name': 'r3', 'VertexType': 'Register'
+            }
+        },
+        "root['edges'][180]": {'new_value': {'id': '181', 'source': 'i v 1113', 'target': 'ram: 2000b882 o 109', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '181', 'source': 'ram: 2000bb0c o 73', 'target': 'ram: 2000bb0c v 185', 'EdgeType': 'Default'
+            }
+        },
+        "root['edges'][69]": {'new_value': {'id': '70', 'source': 'i v 454', 'target': 'ram: 2000b856 o 175', 'EdgeType': 'Default'
+            }, 'old_value': {'id': '70', 'source': 'ram: 2000bad6 o 189', 'target': 'ram: 2000bad6 v 480', 'EdgeType': 'Default'
+            }
+        }
+    }, 'iterable_item_removed': {
+        "root['nodes'][198]": {'id': 'ram: 2000bb18 o 95', 'Name': 'INT_ADD', 'VertexType': 'Op'
+        },
+        "root['nodes'][199]": {'id': 'i v 246', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+        },
+        "root['nodes'][200]": {'id': 'ram: 2000bb18 v 244', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+        },
+        "root['nodes'][201]": {'id': 'ram: 2000bb18 o 96', 'Name': 'STORE ram', 'VertexType': 'Op'
+        },
+        "root['nodes'][202]": {'id': 'ram: 2000bb18 o 517', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+        },
+        "root['nodes'][203]": {'id': 'ram: 2000bb18 v 1521', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+        },
+        "root['nodes'][204]": {'id': 'ram: 2000bb1c o 102', 'Name': 'INT_ADD', 'VertexType': 'Op'
+        },
+        "root['nodes'][205]": {'id': 'i v 264', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+        },
+        "root['nodes'][206]": {'id': 'ram: 2000bb1c v 262', 'Name': 'unique: 00085100', 'VertexType': 'Unique'
+        },
+        "root['nodes'][207]": {'id': 'ram: 2000bb1c o 104', 'Name': 'STORE ram', 'VertexType': 'Op'
+        },
+        "root['nodes'][208]": {'id': 'i v 1464', 'Name': 'const: 00000001', 'VertexType': 'Constant'
+        },
+        "root['nodes'][209]": {'id': 'ram: 2000bb1c o 518', 'Name': 'INDIRECT (STORE)', 'VertexType': 'Op'
+        },
+        "root['nodes'][210]": {'id': 'ram: 2000bb1c v 1524', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+        },
+        "root['nodes'][211]": {'id': 'ram: 2000bb22 o 109', 'Name': 'CALL', 'VertexType': 'Op'
+        },
+        "root['nodes'][212]": {'id': 'i v 281', 'Name': 'ram: 20008216', 'VertexType': 'Default'
+        },
+        "root['nodes'][213]": {'id': 'i v 1451', 'Name': 'const: 2000bd0c', 'VertexType': 'Constant'
+        },
+        "root['nodes'][214]": {'id': 'ram: 2000bb22 o 509', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+        },
+        "root['nodes'][215]": {'id': 'ram: 2000bb22 v 1499', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+        },
+        "root['nodes'][216]": {'id': 'ram: 2000bb22 o 536', 'Name': 'INDIRECT (CALL)', 'VertexType': 'Op'
+        },
+        "root['nodes'][217]": {'id': 'ram: 2000bb22 v 1579', 'Name': 'Stack[
+                -0x10
+            ]', 'VertexType': 'Address Tied'
+        },
+        "root['nodes'][218]": {'id': 'ram: 2000bb26 o 110', 'Name': 'INT_ADD', 'VertexType': 'Op'
+        },
+        "root['nodes'][219]": {'id': 'i v 284', 'Name': 'const: 00000018', 'VertexType': 'Constant'
+        },
+        "root['nodes'][220]": {'id': 'ram: 2000bb26 v 282', 'Name': 'unique: 00084f00', 'VertexType': 'Unique'
+        },
+        "root['nodes'][221]": {'id': 'ram: 2000bb26 o 111', 'Name': 'LOAD ram', 'VertexType': 'Op'
+        },
+        "root['nodes'][222]": {'id': 'ram: 2000bb26 v 285', 'Name': 'r0', 'VertexType': 'Register'
+        },
+        "root['nodes'][223]": {'id': 'ram: 2000bb28 o 126', 'Name': 'RETURN', 'VertexType': 'Op'
+        },
+        "root['nodes'][224]": {'id': 'i v 657', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+        },
+        "root['nodes'][225]": {'id': 'ram: 2000bb28 v 1422', 'Name': 'VARIABLE: 00000000', 'VertexType': 'Default'
+        },
+        "root['nodes'][226]": {'id': 'ram: 2000bb28 o 497', 'Name': 'PIECE', 'VertexType': 'Op'
+        },
+        "root['nodes'][227]": {'id': 'ram: 2000bb28 o 511', 'Name': 'COPY', 'VertexType': 'Op'
+        },
+        "root['nodes'][228]": {'id': 'ram: 2000bb28 v 1503', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+        },
+        "root['nodes'][229]": {'id': 'ram: 2000bb2e o 36', 'Name': 'RETURN', 'VertexType': 'Op'
+        },
+        "root['nodes'][230]": {'id': 'i v 656', 'Name': 'const: 00000000', 'VertexType': 'Constant'
+        },
+        "root['nodes'][231]": {'id': 'ram: 2000bb2e v 1421', 'Name': 'VARIABLE: 00000000', 'VertexType': 'Default'
+        },
+        "root['nodes'][232]": {'id': 'ram: 2000bb2e o 496', 'Name': 'PIECE', 'VertexType': 'Op'
+        },
+        "root['nodes'][233]": {'id': 'i v 1453', 'Name': 'const:ffffffff', 'VertexType': 'Constant'
+        },
+        "root['nodes'][234]": {'id': 'ram: 2000bb2e o 510', 'Name': 'COPY', 'VertexType': 'Op'
+        },
+        "root['nodes'][235]": {'id': 'ram: 2000bb2e v 1501', 'Name': 'ram: 2000bc90', 'VertexType': 'Persistent'
+        },
+        "root['edges'][211]": {'id': '212', 'source': 'ram: 2000bb18 o 517', 'target': 'ram: 2000bb18 v 1521', 'EdgeType': 'Default'
+        },
+        "root['edges'][212]": {'id': '213', 'source': 'i v 1701', 'target': 'ram: 2000bb1c o 102', 'EdgeType': 'Default'
+        },
+        "root['edges'][213]": {'id': '214', 'source': 'i v 264', 'target': 'ram: 2000bb1c o 102', 'EdgeType': 'Default'
+        },
+        "root['edges'][214]": {'id': '215', 'source': 'ram: 2000bb1c o 102', 'target': 'ram: 2000bb1c v 262', 'EdgeType': 'Default'
+        },
+        "root['edges'][215]": {'id': '216', 'source': 'ram: 2000bb1c v 262', 'target': 'ram: 2000bb1c o 104', 'EdgeType': 'Default'
+        },
+        "root['edges'][216]": {'id': '217', 'source': 'i v 1464', 'target': 'ram: 2000bb1c o 104', 'EdgeType': 'Default'
+        },
+        "root['edges'][217]": {'id': '218', 'source': 'ram: 2000bb18 v 1521', 'target': 'ram: 2000bb1c o 518', 'EdgeType': 'Default'
+        },
+        "root['edges'][218]": {'id': '219', 'source': 'ram: 2000bb1c o 518', 'target': 'ram: 2000bb1c v 1524', 'EdgeType': 'Default'
+        },
+        "root['edges'][219]": {'id': '220', 'source': 'i v 281', 'target': 'ram: 2000bb22 o 109', 'EdgeType': 'Default'
+        },
+        "root['edges'][220]": {'id': '221', 'source': 'i v 1451', 'target': 'ram: 2000bb22 o 109', 'EdgeType': 'Default'
+        },
+        "root['edges'][221]": {'id': '222', 'source': 'ram: 2000bb1c v 1524', 'target': 'ram: 2000bb22 o 509', 'EdgeType': 'Default'
+        },
+        "root['edges'][222]": {'id': '223', 'source': 'ram: 2000bb22 o 509', 'target': 'ram: 2000bb22 v 1499', 'EdgeType': 'Default'
+        },
+        "root['edges'][223]": {'id': '224', 'source': 'ram: 2000bb06 v 1584', 'target': 'ram: 2000bb22 o 536', 'EdgeType': 'Default'
+        },
+        "root['edges'][224]": {'id': '225', 'source': 'ram: 2000bb22 o 536', 'target': 'ram: 2000bb22 v 1579', 'EdgeType': 'Default'
+        },
+        "root['edges'][225]": {'id': '226', 'source': 'i v 1701', 'target': 'ram: 2000bb26 o 110', 'EdgeType': 'Default'
+        },
+        "root['edges'][226]": {'id': '227', 'source': 'i v 284', 'target': 'ram: 2000bb26 o 110', 'EdgeType': 'Default'
+        },
+        "root['edges'][227]": {'id': '228', 'source': 'ram: 2000bb26 o 110', 'target': 'ram: 2000bb26 v 282', 'EdgeType': 'Default'
+        },
+        "root['edges'][228]": {'id': '229', 'source': 'ram: 2000bb26 v 282', 'target': 'ram: 2000bb26 o 111', 'EdgeType': 'Default'
+        },
+        "root['edges'][229]": {'id': '230', 'source': 'ram: 2000bb26 o 111', 'target': 'ram: 2000bb26 v 285', 'EdgeType': 'Default'
+        },
+        "root['edges'][230]": {'id': '231', 'source': 'i v 657', 'target': 'ram: 2000bb28 o 126', 'EdgeType': 'Default'
+        },
+        "root['edges'][231]": {'id': '232', 'source': 'ram: 2000bb28 v 1422', 'target': 'ram: 2000bb28 o 126', 'EdgeType': 'Default'
+        },
+        "root['edges'][232]": {'id': '233', 'source': 'ram: 2000bb22 v 1579', 'target': 'ram: 2000bb28 o 497', 'EdgeType': 'Default'
+        },
+        "root['edges'][233]": {'id': '234', 'source': 'ram: 2000bb26 v 285', 'target': 'ram: 2000bb28 o 497', 'EdgeType': 'Default'
+        },
+        "root['edges'][234]": {'id': '235', 'source': 'ram: 2000bb28 o 497', 'target': 'ram: 2000bb28 v 1422', 'EdgeType': 'Default'
+        },
+        "root['edges'][235]": {'id': '236', 'source': 'ram: 2000bb22 v 1499', 'target': 'ram: 2000bb28 o 511', 'EdgeType': 'Default'
+        },
+        "root['edges'][236]": {'id': '237', 'source': 'ram: 2000bb28 o 511', 'target': 'ram: 2000bb28 v 1503', 'EdgeType': 'Default'
+        },
+        "root['edges'][237]": {'id': '238', 'source': 'i v 656', 'target': 'ram: 2000bb2e o 36', 'EdgeType': 'Default'
+        },
+        "root['edges'][238]": {'id': '239', 'source': 'ram: 2000bb2e v 1421', 'target': 'ram: 2000bb2e o 36', 'EdgeType': 'Default'
+        },
+        "root['edges'][239]": {'id': '240', 'source': 'i v 1401', 'target': 'ram: 2000bb2e o 496', 'EdgeType': 'Default'
+        },
+        "root['edges'][240]": {'id': '241', 'source': 'i v 1453', 'target': 'ram: 2000bb2e o 496', 'EdgeType': 'Default'
+        },
+        "root['edges'][241]": {'id': '242', 'source': 'ram: 2000bb2e o 496', 'target': 'ram: 2000bb2e v 1421', 'EdgeType': 'Default'
+        },
+        "root['edges'][242]": {'id': '243', 'source': 'i v 1701', 'target': 'ram: 2000bb2e o 510', 'EdgeType': 'Default'
+        },
+        "root['edges'][243]": {'id': '244', 'source': 'ram: 2000bb2e o 510', 'target': 'ram: 2000bb2e v 1501', 'EdgeType': 'Default'
+        }
+    }
+}

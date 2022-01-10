@@ -29,6 +29,9 @@ print("start")
 func_graph = refwalk.get_all_func_props(currentProgram, listing, refMgr)
 # func_graph = refwalk.get_all_func_peripherals(currentProgram,listing, func_graph, refMgr)
 func_graph = refwalk.get_all_func_instructions(listing, func_graph, currentProgram)
+func_graph = refwalk.get_all_func_blocks(currentProgram, listing, func_graph)
+func_graph = refwalk.get_all_func_end(currentProgram, listing, func_graph)
+
 refwalk.printd(func_graph)
  
 
