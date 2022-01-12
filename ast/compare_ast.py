@@ -1,10 +1,10 @@
-from deepdiff import DeepDiff
 import json
 import os
 from itertools import groupby
 import pydot
 import pprint
 import numpy as np
+from collections import defaultdict
 
 from zss import simple_distance, Node
 
@@ -52,17 +52,14 @@ def getLabel(ast, node):
 
 # graph = pydot.Dot("my_graph", graph_type="graph", bgcolor="white")
 
-def create_tree(ast, adj_list, root_node, root_id, seen=[]):
+def create_tree(ast, adj_list, root_node, root_id):
     for id in adj_list[root_id]:
-        # if id in seen:
-        #     continue
-        # seen.append(id)
 
         # graph.add_edge(pydot.Edge(root_id, id, color="blue", label=getLabel(ast,root_id) +" === "+getLabel(ast,id)))
         current_node = Node(getLabel(ast, id))
         root_node.addkid(current_node)
         if id in adj_list:
-            create_tree(ast, adj_list, current_node, id, seen)
+            create_tree(ast, adj_list, current_node, id)
         else:
             pass
     # graph.write_png("outputA.png")
@@ -94,10 +91,73 @@ def get_orphans(adj_list):
 def get_rootnode(ast_file):
     ast = get_ast(ast_file)
     adj_list = get_adjacency_list(ast['edges'])
+    adj_list = remove_cycles(adj_list)
     orphans = get_orphans(adj_list)
     root_node = create_tree_with_orphans(ast, adj_list, orphans)
     print("Tree size = ", len(ast['nodes']) + 1)
     return root_node
+
+
+
+def has_cycles(node, adj_list, visited, dfs_visited):
+    visited[node] = 1
+    dfs_visited[node] = 1
+    for child_node in adj_list[node]:
+        if not visited[child_node] and child_node in adj_list:
+            if has_cycles(child_node,adj_list, visited, dfs_visited):
+                return True
+        elif dfs_visited[child_node]:
+            return True
+    
+    dfs_visited[node] = 0
+    return False
+
+
+def is_cyclic(adj_list):
+    visited = defaultdict(int)
+    dfs_visited = defaultdict(int)
+
+    for node in adj_list:
+        if not visited[node]:
+            if has_cycles(node, adj_list, visited, dfs_visited):
+                return True
+    return False
+
+
+def delete_cyclic_edge(node, adj_list, new_adj_list, visited, dfs_visited):
+    new_adj_list[node] = []
+    visited[node] = 1
+    dfs_visited[node] = 1
+    for child_node in adj_list[node]:
+        new_adj_list[node].append(child_node)
+        if not visited[child_node] and child_node in adj_list:
+            delete_cyclic_edge(child_node,adj_list, new_adj_list, visited, dfs_visited)
+        elif dfs_visited[child_node]:
+            print('cycle detected: ', node, " going back to ", child_node, " EVICT EDGE!!")
+            new_adj_list[node].remove(child_node)
+
+    dfs_visited[node] = 0
+    
+
+
+def remove_cycles(adj_list):
+    visited = defaultdict(int)
+    dfs_visited = defaultdict(int)
+
+    new_adj_list = {}
+
+    for node in adj_list:
+        if not visited[node]:
+            delete_cyclic_edge(node, adj_list, new_adj_list, visited, dfs_visited)
+                
+    return new_adj_list
+    
+
+
+cycle_list_1 = {'a': ['b'], 'b': ['c'], 'c':['a']}
+cycle_list_2 = {'a': ['b','d'], 'b': ['c'], 'c':['a','d']}
+
+# print(remove_cycles(cycle_list_2))
 
 
 # TestNode understand structure
