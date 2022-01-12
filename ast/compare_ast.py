@@ -39,6 +39,8 @@ def getLabel(ast, node):
             name = x["Name"]
             if 'ram:' in name:
                 name = name.split(':')[0]
+            if 'const:200' in name:
+                name = 'const:200'
             label = name + " type:" + x["VertexType"]
             break
 
@@ -98,20 +100,23 @@ def get_rootnode(ast_file):
     return root_node
 
 
+# TestNode understand structure
+# root_nodeC = get_rootnode('func_0x2000bee8.json')
+
 # Calculate Difference using Tree Edit Distance
 
 # Two nodes slightly different
 # root_nodeA = get_rootnode('func2000ba98.json')
 # root_nodeB = get_rootnode('func2000b824.json')
 
-# TestNode understand structure
-# root_nodeC = get_rootnode('func_0x2000bee8.json')
+
+
 # Two Nodes that should be equal with distance = 0
 root_nodeD = get_rootnode('func200079ba.json')
 root_nodeE = get_rootnode('func20007886.json')
 
 distance, opts = simple_distance(root_nodeD, root_nodeE, return_operations=True)
-print("distance", distance)
+
 
 # Calculate Difference using Deepequals
 # ddiff = DeepDiff(astA["node"], astB["node"], ignore_order=True)
@@ -138,7 +143,7 @@ B = (
                     )
     .addkid(Node("e"))
 )
-# dist, opts = simple_distance(A, B, return_operations=True)
+# distance, opts = simple_distance(A, B, return_operations=True)
 OPERATIONS = {
     0: 'remove',
     1: 'insert',
@@ -154,3 +159,5 @@ for opt in opts:
     if opt.arg2 is not None:
         s += f"\t{opt.arg2.label}"
     print(s)
+
+print("distance", distance)
