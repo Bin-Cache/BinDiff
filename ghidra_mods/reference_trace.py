@@ -1,7 +1,9 @@
 import sys
-import refwalk
-import json
 import os
+import json
+
+import refwalk
+
 
 try:
     if currentAddress:
