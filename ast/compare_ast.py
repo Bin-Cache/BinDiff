@@ -27,8 +27,8 @@ def get_ast(ast_file):
 
 def get_adjacency_list(edges):
     edges = [(x["target"], x["source"]) for x in edges]
-    pprint.pprint("edges")
-    pprint.pprint(edges)
+    # pprint.pprint("edges")
+    # pprint.pprint(edges)
     return {k: [v[1] for v in g] for k, g in groupby(sorted(edges), lambda e: e[0])}
 
 
@@ -46,7 +46,7 @@ def getLabel(ast, node):
 
     if not label:
         label = str(node)
-    print("node label", label)
+    # print("node label", label)
     return label
 
 
@@ -166,16 +166,16 @@ cycle_list_2 = {'a': ['b','d'], 'b': ['c'], 'c':['a','d']}
 # Calculate Difference using Tree Edit Distance
 
 # Two nodes slightly different
-# root_nodeA = get_rootnode('func2000ba98.json')
-# root_nodeB = get_rootnode('func2000b824.json')
+root_nodeA = get_rootnode('func2000ba98.json')
+root_nodeB = get_rootnode('func2000b824.json')
 
 
 
 # Two Nodes that should be equal with distance = 0
-root_nodeD = get_rootnode('func200079ba.json')
-root_nodeE = get_rootnode('func20007886.json')
+# root_nodeA = get_rootnode('func200079ba.json')
+# root_nodeB = get_rootnode('func20007886.json')
 
-distance, opts = simple_distance(root_nodeD, root_nodeE, return_operations=True)
+distance, opts = simple_distance(root_nodeA, root_nodeB, return_operations=True)
 
 
 # Calculate Difference using Deepequals
@@ -218,6 +218,8 @@ for opt in opts:
         s += f"\t{opt.arg1.label}"
     if opt.arg2 is not None:
         s += f"\t{opt.arg2.label}"
-    print(s)
+    if "match" not in s: 
+        print(s)
 
 print("distance", distance)
+print("opts", len(opts))
