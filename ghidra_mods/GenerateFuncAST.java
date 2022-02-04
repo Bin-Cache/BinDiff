@@ -37,7 +37,7 @@ import ghidra.graph.exporter.*;
 import java.io.File;
 import org.apache.commons.lang3.ArrayUtils;
 
-public class GraphASTMod2 extends GhidraScript {
+public class GenerateFuncAST extends GhidraScript {
     private static final String SHAPE_ATTRIBUTE = "Shape";
 
     protected static final String DEFAULT = "Default";
@@ -63,7 +63,8 @@ public class GraphASTMod2 extends GhidraScript {
     String updateNodes = "ram:2000ba3c v 1013,ram:2000b7de v 799,ram:2000ba3c v 1016,ram:2000b7de v 802,ram:2000ba3c v 1011,ram:2000b7de v 797,ram:2000ba78 v 847,ram:2000b804 v 674";
 
     
-
+    String folder = "";
+    String functionName = "";
 
     String[] insertStringArray = insertNodes.split(","); 
     String[] removeStringArray = removeNodes.split(","); 
@@ -71,24 +72,16 @@ public class GraphASTMod2 extends GhidraScript {
 
     @Override
     public void run() throws Exception {
-        PluginTool tool = state.getTool();
-        if (tool == null) {
-            println("Script is not running in GUI");
-        }
-        GraphDisplayBroker graphDisplayBroker = tool.getService(GraphDisplayBroker.class);
-        if (graphDisplayBroker == null) {
-            Msg.showError(this, tool.getToolFrame(), "GraphASTMod2 Error",
-                    "No graph display providers found: Please add a graph display provider to your tool");
-            return;
-        }
-
         String[] args = getScriptArgs();
+        functionName = args[0];
+        folder = args[1];
+        long offset = Long.decode(functionName);
+        
         // Address addr = this.currentAddress;
-        Address addr = getAddress(0x200077e4);
+        Address addr = getAddress(offset);
         func = this.getFunctionContaining(addr);
         if (func == null) {
-            Msg.showWarn(this, state.getTool().getToolFrame(), "GraphASTMod2 Error",
-                    "No Function at current location");
+           
             return;
         }
 
@@ -141,23 +134,13 @@ public class GraphASTMod2 extends GhidraScript {
         JsonGraphExporter exporter = new JsonGraphExporter();
         List<String> lines = doExport(exporter, graph);
         String ast_json_string = String.valueOf(lines.get(0));
-        println(ast_json_string);
+        // println(ast_json_string);
 
 
-        PrintWriter pw = new PrintWriter("/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/versions/ast_temp.json");
+        PrintWriter pw = new PrintWriter("/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/"+folder+"/"+functionName+".json");
         pw.write(ast_json_string);
         pw.flush();
         pw.close();
-
-
-        GraphDisplay graphDisplay = graphDisplayBroker.getDefaultGraphDisplay(false, monitor);
-
-        String description = "AST Data Flow Graph For " + func.getName();
-        graphDisplay.setGraph(graph, displayOptions, description, false, monitor);
-
-        // Install a handler so the selection/location will map
-        graphDisplay.setGraphDisplayListener(
-                new ASTGraphDisplayListener(tool, graphDisplay, high, func.getProgram()));
     }
 
     private List<String> doExport(AttributedGraphExporter exporter, AttributedGraph graph2) throws IOException {
@@ -351,53 +334,6 @@ public class GraphASTMod2 extends GhidraScript {
         return opiter;
     }
 
-    class ASTGraphDisplayListener extends AddressBasedGraphDisplayListener {
 
-        HighFunction highfunc;
-
-        public ASTGraphDisplayListener(PluginTool tool, GraphDisplay display, HighFunction high,
-                Program program) {
-            super(tool, program, display);
-            highfunc = high;
-        }
-
-        @Override
-        protected Set<AttributedVertex> getVertices(AddressSetView selection) {
-            return Collections.emptySet();
-        }
-
-        @Override
-        protected AddressSet getAddresses(Set<AttributedVertex> vertices) {
-            AddressSet set = new AddressSet();
-            for (AttributedVertex vertex : vertices) {
-                Address address = getAddress(vertex);
-                if (address != null) {
-                    set.add(address);
-                }
-            }
-            return set;
-        }
-
-        @Override
-        protected Address getAddress(AttributedVertex vertex) {
-            if (vertex == null) {
-                return null;
-            }
-            String vertexId = vertex.getId();
-            int firstcolon = vertexId.indexOf(':');
-            if (firstcolon == -1) {
-                return null;
-            }
-
-            int firstSpace = vertexId.indexOf(' ');
-            String addrString = vertexId.substring(0, firstSpace);
-            return getAddress(addrString);
-        }
-
-        @Override
-        public GraphDisplayListener cloneWith(GraphDisplay graphDisplay) {
-            return new ASTGraphDisplayListener(tool, graphDisplay, highfunc, currentProgram);
-        }
-    }
 }
 

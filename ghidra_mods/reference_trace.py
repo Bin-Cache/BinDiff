@@ -1,9 +1,17 @@
 import sys
 import os
 import json
+import re
+
 
 import refwalk
 
+
+program_file = getProgramFile().getName()
+
+def get_valid_filename(s):
+    s = str(s).strip().replace('.', '_')
+    return re.sub(r'(?u)[^-\w.]', '', s)
 
 try:
     if currentAddress:
@@ -26,7 +34,7 @@ refMgr = currentProgram.getReferenceManager()
 # functionManager = currentProgram.getFunctionManager()
 
 
-print("start")
+print("Fetching Info_Graph for: ", program_file)
 # sequence = refwalk.getFuncReferences(currentAddress, listing, refMgr)
 func_graph = refwalk.get_all_func_props(currentProgram, listing, refMgr)
 # func_graph = refwalk.get_all_func_peripherals(currentProgram,listing, func_graph, refMgr)
@@ -34,19 +42,16 @@ func_graph = refwalk.get_all_func_instructions(listing, func_graph, currentProgr
 func_graph = refwalk.get_all_func_blocks(currentProgram, listing, func_graph)
 func_graph = refwalk.get_all_func_end(currentProgram, listing, func_graph)
 
-refwalk.printd(func_graph)
+# refwalk.printd(func_graph)
  
 
-try:
-    folder = os.path.dirname(os.path.abspath(__file__))
-except NameError:
-    folder = "/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/"
-
-out_file = os.environ.get("OUT_FILE", None)
-if out_file:
-    file_name = os.path.join(folder, out_file)
-else:
-    file_name = os.path.join(folder, 'graphA.json')
+folder = "/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/versions/" + get_valid_filename(program_file) + "/"
+if not os.path.exists(folder):
+    os.makedirs(folder)
+file_name = os.path.join(folder, 'info_graph.json')
 
 with open(file_name, "w") as outfile: 
     json.dump(func_graph, outfile)
+
+print("Fetching Info_Graph Complete")
+

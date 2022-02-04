@@ -23,7 +23,7 @@ def shouldCall(address, ref):
         return False
 
 def printd(text):
-    print(text)
+    # print(text)
     if type(text) != str:
         return
     with open('output_trace.txt', 'a') as output:
@@ -154,7 +154,7 @@ def get_func_blocks(currentProgram, listing, func_address):
             instructions += "&" + ins.getAddressString(False, True) +" "+ ins.toString()
         block = blocks.next()
         block_list.append(instructions)
-    print(block_list)
+    # print(block_list)
     return block_list
 
 def get_all_func_peripherals(currentProgram, listing, func_graph, refMgr):  
@@ -173,10 +173,11 @@ def get_all_func_instructions(listing, func_graph, currentProgram):
                 instruction_string = instruction.toString()
                 instructions += "&" + instruction_string.strip()
             else:
-                print(instr_address)
+                # print(instr_address)
+                pass
           
         instructions = instructions[1:]
-        print(instructions)
+        # print(instructions)
             
         func_graph[func_address] = (func_graph[func_address][0], func_graph[func_address][1], instructions)
     return func_graph

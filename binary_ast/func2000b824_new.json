@@ -70,6 +70,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1273 x 2",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
+        },
+        {
             "id": "i v 110",
             "Name": "const:00000018",
             "VertexType": "Constant"
@@ -95,6 +101,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1273 x 3",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
+        },
+        {
             "id": "ram:2000b830 v 1150",
             "Name": "ram:2000b9c4",
             "VertexType": "Persistent"
@@ -103,6 +115,12 @@
             "id": "ram:2000b832 o 44",
             "Name": "INT_ADD",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 4",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "i v 116",
@@ -340,6 +358,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1273 x 5",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
+        },
+        {
             "id": "i v 425",
             "Name": "const:00000018",
             "VertexType": "Constant"
@@ -373,6 +397,12 @@
             "id": "ram:2000b856 o 175",
             "Name": "INT_ADD",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 6",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "i v 454",
@@ -428,6 +458,12 @@
             "id": "ram:2000b85a o 65",
             "Name": "INT_ADD",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 7",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "i v 168",
@@ -541,6 +577,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1066 x 2",
+            "Shape": "Triangle Down",
+            "Name": "r3",
+            "VertexType": "Register"
+        },
+        {
             "id": "ram:2000b866 v 1195",
             "Name": "Stack[-0x10]",
             "VertexType": "Address Tied"
@@ -636,6 +678,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1066 x 3",
+            "Shape": "Triangle Down",
+            "Name": "r3",
+            "VertexType": "Register"
+        },
+        {
             "id": "ram:2000b870 v 1207",
             "Name": "Stack[-0x10]",
             "VertexType": "Address Tied"
@@ -644,6 +692,12 @@
             "id": "ram:2000b872 o 79",
             "Name": "INT_ADD",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 8",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "i v 203",
@@ -706,6 +760,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1273 x 9",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
+        },
+        {
             "id": "i v 221",
             "Name": "const:00000010",
             "VertexType": "Constant"
@@ -741,6 +801,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1273 x 10",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
+        },
+        {
             "id": "i v 227",
             "Name": "const:00000004",
             "VertexType": "Constant"
@@ -764,6 +830,12 @@
             "id": "ram:2000b87a o 90",
             "Name": "INT_ADD",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 11",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "i v 233",
@@ -801,6 +873,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1273 x 12",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
+        },
+        {
             "id": "i v 274",
             "Name": "const:00000008",
             "VertexType": "Constant"
@@ -834,6 +912,12 @@
             "id": "ram:2000b882 o 108",
             "Name": "INT_ADD",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 13",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "i v 280",
@@ -871,6 +955,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1273 x 14",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
+        },
+        {
             "id": "i v 286",
             "Name": "const:00000018",
             "VertexType": "Constant"
@@ -899,6 +989,12 @@
             "id": "ram:2000b888 o 117",
             "Name": "INT_ADD",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 15",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "i v 304",
@@ -981,6 +1077,12 @@
             "VertexType": "Op"
         },
         {
+            "id": "i v 1066 x 4",
+            "Shape": "Triangle Down",
+            "Name": "r3",
+            "VertexType": "Register"
+        },
+        {
             "id": "i v 1116",
             "Name": "const:ffffffff",
             "VertexType": "Constant"
@@ -989,6 +1091,12 @@
             "id": "ram:2000b890 o 388",
             "Name": "COPY",
             "VertexType": "Op"
+        },
+        {
+            "id": "i v 1273 x 16",
+            "Shape": "Triangle Down",
+            "Name": "ram:2000b9c4",
+            "VertexType": "Persistent"
         },
         {
             "id": "ram:2000b890 v 1145",
@@ -1059,7 +1167,7 @@
         },
         {
             "id": "11",
-            "source": "i v 1273",
+            "source": "i v 1273 x 2",
             "target": "ram:2000b830 o 42",
             "EdgeType": "Default"
         },
@@ -1089,7 +1197,7 @@
         },
         {
             "id": "16",
-            "source": "i v 1273",
+            "source": "i v 1273 x 3",
             "target": "ram:2000b830 o 390",
             "EdgeType": "Default"
         },
@@ -1101,7 +1209,7 @@
         },
         {
             "id": "18",
-            "source": "i v 1273",
+            "source": "i v 1273 x 4",
             "target": "ram:2000b832 o 44",
             "EdgeType": "Default"
         },
@@ -1359,7 +1467,7 @@
         },
         {
             "id": "61",
-            "source": "i v 1273",
+            "source": "i v 1273 x 5",
             "target": "ram:2000b852 o 164",
             "EdgeType": "Default"
         },
@@ -1407,7 +1515,7 @@
         },
         {
             "id": "69",
-            "source": "i v 1273",
+            "source": "i v 1273 x 6",
             "target": "ram:2000b856 o 175",
             "EdgeType": "Default"
         },
@@ -1486,7 +1594,7 @@
         },
         {
             "id": "82",
-            "source": "i v 1273",
+            "source": "i v 1273 x 7",
             "target": "ram:2000b85a o 65",
             "EdgeType": "Default"
         },
@@ -1648,7 +1756,7 @@
         },
         {
             "id": "109",
-            "source": "i v 1066",
+            "source": "i v 1066 x 2",
             "target": "ram:2000b864 o 410",
             "EdgeType": "Default"
         },
@@ -1780,7 +1888,7 @@
         },
         {
             "id": "131",
-            "source": "i v 1066",
+            "source": "i v 1066 x 3",
             "target": "ram:2000b870 o 409",
             "EdgeType": "Default"
         },
@@ -1798,7 +1906,7 @@
         },
         {
             "id": "134",
-            "source": "i v 1273",
+            "source": "i v 1273 x 8",
             "target": "ram:2000b872 o 79",
             "EdgeType": "Default"
         },
@@ -1894,7 +2002,7 @@
         },
         {
             "id": "150",
-            "source": "i v 1273",
+            "source": "i v 1273 x 9",
             "target": "ram:2000b876 o 86",
             "EdgeType": "Default"
         },
@@ -1936,7 +2044,7 @@
         },
         {
             "id": "157",
-            "source": "i v 1273",
+            "source": "i v 1273 x 10",
             "target": "ram:2000b878 o 88",
             "EdgeType": "Default"
         },
@@ -1966,7 +2074,7 @@
         },
         {
             "id": "162",
-            "source": "i v 1273",
+            "source": "i v 1273 x 11",
             "target": "ram:2000b87a o 90",
             "EdgeType": "Default"
         },
@@ -2014,7 +2122,7 @@
         },
         {
             "id": "170",
-            "source": "i v 1273",
+            "source": "i v 1273 x 12",
             "target": "ram:2000b880 o 106",
             "EdgeType": "Default"
         },
@@ -2056,7 +2164,7 @@
         },
         {
             "id": "177",
-            "source": "i v 1273",
+            "source": "i v 1273 x 13",
             "target": "ram:2000b882 o 108",
             "EdgeType": "Default"
         },
@@ -2098,7 +2206,7 @@
         },
         {
             "id": "184",
-            "source": "i v 1273",
+            "source": "i v 1273 x 14",
             "target": "ram:2000b884 o 110",
             "EdgeType": "Default"
         },
@@ -2140,7 +2248,7 @@
         },
         {
             "id": "191",
-            "source": "i v 1273",
+            "source": "i v 1273 x 15",
             "target": "ram:2000b888 o 117",
             "EdgeType": "Default"
         },
@@ -2236,7 +2344,7 @@
         },
         {
             "id": "207",
-            "source": "i v 1066",
+            "source": "i v 1066 x 4",
             "target": "ram:2000b890 o 378",
             "EdgeType": "Default"
         },
@@ -2254,7 +2362,7 @@
         },
         {
             "id": "210",
-            "source": "i v 1273",
+            "source": "i v 1273 x 16",
             "target": "ram:2000b890 o 388",
             "EdgeType": "Default"
         },
