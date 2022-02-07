@@ -82,9 +82,7 @@ public class GraphASTMod2 extends GhidraScript {
             return;
         }
 
-        String[] args = getScriptArgs();
-        // Address addr = this.currentAddress;
-        Address addr = getAddress(0x200077e4);
+        Address addr = this.currentAddress;
         func = this.getFunctionContaining(addr);
         if (func == null) {
             Msg.showWarn(this, state.getTool().getToolFrame(), "GraphASTMod2 Error",

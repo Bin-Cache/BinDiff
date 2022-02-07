@@ -7,6 +7,8 @@ import pydot
 import pprint
 import numpy as np
 from collections import defaultdict
+import pandas as pd
+from IPython.core.display import display, HTML
 
 
 sys.path.append('/Users/wamuo/Documents/GitHub/zhang-shasha')
@@ -266,7 +268,7 @@ def get_rootnode(ast_file):
     orphans = get_orphans(adj_list)
     root_node = create_tree_with_orphans(ast, adj_list, orphans)
     print("Tree size = ", len(ast['nodes']) + 1)
-    print("Adjacency list nodes = ", len(adj_list))
+
     return root_node
 
 
@@ -305,12 +307,26 @@ def get_rootnode(ast_file):
 
 ########## Two Nodes that should be equal with distance = 0 End ##########
 
+def save_panda(df, path):
+    html = df.to_html()
+    text_file = open(path + "_delta_ast.html", "w")
+    text_file.write(html)
+    text_file.close()
+
+
+def add_color(text):
+
+    if ("remove" in text):
+        color = 'red' 
+    if ("update" in text):
+        color = 'orange'
+    if ("insert" in text):
+        color = 'blue'
+    return 'color: %s' % color
 
 
 
-
-def compare_ast(func_fileA = 'func_0x2000ba16.json', func_fileB = 'func_0x2000b7b8.json'):
-
+def compare_ast(func_fileA = 'binary_ast/func_0x2000ba16.json', func_fileB = 'binary_ast/func_0x2000b7b8.json', path = "delta_ast"):
     root_nodeA = get_rootnode(func_fileA)
     root_nodeB = get_rootnode(func_fileB)
     distance, opts = simple_distance(root_nodeA, root_nodeB,CustomNode.get_children, CustomNode.get_label, return_operations=True)
@@ -319,6 +335,7 @@ def compare_ast(func_fileA = 'func_0x2000ba16.json', func_fileB = 'func_0x2000b7
     sout1 = ''
     sout2 = ''
     sout3 = ''
+    changes = []
     for opt in opts:
         s = OPERATIONS[opt.type]
         sA = ""
@@ -337,10 +354,18 @@ def compare_ast(func_fileA = 'func_0x2000ba16.json', func_fileB = 'func_0x2000b7
             sB = ""
 
         if "match" not in s: 
-            print(s)
+            # print(s)
+            changes.append(s)
             sout1 += sA
             sout2 += sB
             sout3 += sC
+    
+    changes_np = np.array(changes)
+    df = pd.DataFrame(changes_np, columns=["Change"])
+    s2 = df.style.applymap(add_color)
+    save_panda(s2,path)
+
+
     print("Removes")
     print(sout1)
     print("Inserts")
@@ -349,4 +374,6 @@ def compare_ast(func_fileA = 'func_0x2000ba16.json', func_fileB = 'func_0x2000b7
     print(sout3)
     print("distance", distance)
     print("opts", len(opts))
+
+compare_ast(func_fileA = 'versions/otaApp-1_4_2_bin/0x200057d0.json', func_fileB = 'versions/otaApp-1_4_4_bin/0x200055d0.json')
 
