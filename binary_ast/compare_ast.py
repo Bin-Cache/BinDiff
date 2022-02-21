@@ -8,11 +8,12 @@ import pprint
 import numpy as np
 from collections import defaultdict
 import pandas as pd
-from IPython.core.display import display, HTML
+from IPython import display
+import subprocess
 
 
 sys.path.append('/Users/wamuo/Documents/GitHub/zhang-shasha')
-print(sys.path)
+# print(sys.path)
 
 from zss import simple_distance, Node
 
@@ -27,7 +28,6 @@ from zss import simple_distance, Node
 
 dir_path = os.path.dirname(os.path.abspath(__file__))
 folder = os.path.abspath(os.path.join(dir_path, os.pardir))
-print("patsfkfjlsfbufoajfdhkujh",folder)
 
 OPERATIONS = {
     0: 'remove',
@@ -82,8 +82,9 @@ B = (
 
 class CustomNode(object):
 
-    def __init__(self, id, ast):
+    def __init__(self, id, edge, ast):
         self.my_id = id
+        self.edge = edge
         self.my_label = getLabel(ast, id)
         self.my_children = list()
 
@@ -155,7 +156,7 @@ def create_tree(ast, adj_list, root_node, root_id):
     for id in adj_list[root_id]:
 
         # graph.add_edge(pydot.Edge(root_id, id, color="blue", label=getLabel(ast,root_id) +" === "+getLabel(ast,id)))
-        current_node = CustomNode(id, ast)
+        current_node = CustomNode(id, (id, root_id), ast)
         root_node.addkid(current_node)
         if id in adj_list:
             create_tree(ast, adj_list, current_node, id)
@@ -168,7 +169,7 @@ def create_tree(ast, adj_list, root_node, root_id):
 def create_tree_with_orphans(ast, adj_list, orphans):
     root_id = "root"
     adj_list[root_id] = orphans
-    root = CustomNode(root_id, ast)
+    root = CustomNode(root_id, (root_id, None), ast)
     # print(adj_list[root_id])
     return create_tree(ast, adj_list, root, root_id)
 
@@ -259,8 +260,7 @@ def remove_redundant(ast,adj_list):
 
 
     
-def get_rootnode(ast_file):
-    ast = get_ast(ast_file)
+def get_rootnode(ast):
     adj_list = get_adjacency_list(ast['edges'])
     # remove_redundant(ast,adj_list)
     # exit()
@@ -268,8 +268,9 @@ def get_rootnode(ast_file):
     orphans = get_orphans(adj_list)
     root_node = create_tree_with_orphans(ast, adj_list, orphans)
     print("Tree size = ", len(ast['nodes']) + 1)
+    tree_size = len(ast['nodes'])
 
-    return root_node
+    return root_node, tree_size
 
 
 
@@ -313,9 +314,16 @@ def save_panda(df, path):
     text_file.write(html)
     text_file.close()
 
+def save_result(result, path):
+    with open(path + "result.json", "w") as outfile: 
+        json.dump(result, outfile)
+
+
+
+
 
 def add_color(text):
-
+    color = "black"
     if ("remove" in text):
         color = 'red' 
     if ("update" in text):
@@ -325,55 +333,248 @@ def add_color(text):
     return 'color: %s' % color
 
 
+def get_op_address(edge_string):
+    print(edge_string)
+    print(edge_string)
+    print(edge_string)
+    print(edge_string)
+    print(edge_string)
+    edge_tuple = eval(edge_string)
+    node = edge_tuple[0] if "o" in edge_tuple[0] else edge_tuple[1]
+    if node == "root":
+        return 0
+    address = node.split(" o ")[0].split(":")[1]
+    return address
 
-def compare_ast(func_fileA = 'binary_ast/func_0x2000ba16.json', func_fileB = 'binary_ast/func_0x2000b7b8.json', path = "delta_ast"):
-    root_nodeA = get_rootnode(func_fileA)
-    root_nodeB = get_rootnode(func_fileB)
+def get_instruction_at_op(binary_folder, edge_string):
+    instruction = ""
+    if "->" in edge_string:
+        addresses = []
+        for i in edge_string.split("->"):
+            addresses.append(get_op_address(i))
+        
+        if addresses[0] != 0:
+            binary_a = binary_folder[0].split("/")[1].replace('_', '.')
+            subprocess.call(['./ghidra_mods/instruction.sh', binary_a , addresses[0]])
+            with open("temp") as f:
+                instruction = f.read().rstrip()
+
+        if addresses[1] != 0:
+            binary_b = binary_folder[1].split("/")[1].replace('_', '.')
+            subprocess.call(['./ghidra_mods/instruction.sh', binary_b , addresses[1]])
+            with open("temp") as f:
+                instruction += "->" + f.read().rstrip()
+
+    else:
+        binary = binary_folder[0].split("/")[1].replace('_', '.')
+        op_addr =  get_op_address(edge_string)
+        if op_addr != 0:
+            subprocess.call(['./ghidra_mods/instruction.sh', binary , op_addr])
+            with open("temp") as f:
+                instruction = f.read().rstrip()
+    
+    print(instruction)
+    return instruction
+
+
+def get_changes(table):
+    updates = table[table['Change'].str.contains('update')]
+
+    inserts = table[table['Change'].str.contains(
+        'insert')]
+    removes = table[table['Change'].str.contains(
+        'remove')]
+
+    return updates, inserts, removes
+
+
+
+    adj_list = get_adjacency_list(ast['edges'])
+    # remove_redundant(ast,adj_list)
+    # exit()
+    adj_list = remove_cycles(adj_list)
+def get_groups(table, func_fileA = 'versions/otaApp-1_4_2_bin/0x2000ba98.json', func_fileB = 'versions/otaApp-1_4_4_bin/0x2000b824.json'):
+    adjA = get_adjacency_list(get_ast(func_fileA)['edges'])
+    adjA = remove_cycles(adjA)
+    adjB = get_adjacency_list(get_ast(func_fileB)['edges'])
+    adjB = remove_cycles(adjB)
+
+ 
+    updates, inserts, removes = get_changes(table)
+    change_group = {}
+
+    remove_calls_ids = removes[removes['Change'].str.contains('label:CALL')]['ID'].values.tolist()
+    insert_calls_ids = inserts[inserts['Change'].str.contains('label:CALL')]['ID'].values.tolist()
+    print("removes",remove_calls_ids)
+    insert_ids = inserts['ID'].values.tolist()
+    remove_ids = removes['ID'].values.tolist()
+
+    change_group = {}
+
+    get_call_groups(adjA, removes, remove_ids, change_group, remove_calls_ids)
+    get_call_groups(adjB, inserts, insert_ids, change_group, insert_calls_ids)
+
+
+    get_root_groups(adjA, change_group, remove_ids)
+    get_root_groups(adjB, change_group, insert_ids)
+
+    return change_group
+
+def get_root_groups(adjB, change_group, ids):
+    visited = defaultdict(int)
+
+    for id in ids:
+        if not visited[id]:
+            tag_root_change(id, adjB, visited, change_group, ids, id)
+
+def get_call_groups(adjA, call_table, changes, change_group, call_ids):
+    for call in call_ids:
+        tag_call_subtree(call, adjA, change_group, changes, call)
+        call_func = call.split(" o ")[0]
+        print(call_func)
+        call_edges = call_table[(call_table['Change'].str.contains('label:INDIRECT')) &
+            (call_table['Change'].str.contains(call_func))]['Edge'].values.tolist()
+        for edge in call_edges:
+            try:
+                edge = eval(edge)
+                remove_item_from_list(changes, edge[0])
+                change_group[edge[0]] = "Call: " +call
+                remove_item_from_list(changes, edge[1])
+                change_group[edge[1]] = "Call: " +call
+            except ValueError:
+                print(edge)
+                print(ValueError)
+
+    
+def tag_root_change(id, adj, visited, change_group, insert_ids, root_id):
+    change_group[id] = "parent: " +root_id
+    visited[id] = 1
+    
+    if id in adj:
+        for child in adj[id]:
+            if child in insert_ids:
+                tag_root_change(child, adj, visited, change_group, insert_ids, root_id)
+
+    
+def tag_call_subtree(node, adj, change_group, changes, root):
+    change_group[node] = "Call: " +root
+    remove_item_from_list(changes, node)
+    for id in adj[node]:
+        if id in adj:
+            tag_call_subtree(id, adj, change_group, changes, root)
+        else:
+            change_group[id] = "Call: " +root
+            remove_item_from_list(changes, id)
+
+
+def remove_item_from_list(list, item):
+    print("removing", item)
+    print(list)
+    if item in list:
+        list.remove(item)
+
+    
+    
+def compare_ast(bin_folderA, bin_folderB, func_fileA = 'binary_ast/func_0x2000ba16.json', func_fileB = 'binary_ast/func_0x2000b7b8.json', path = "delta_ast"):
+    funcA_ast = get_ast(func_fileA)
+    funcB_ast = get_ast(func_fileB)
+
+    root_nodeA, tree_size = get_rootnode(funcA_ast)
+    if tree_size > 800:
+        return
+    root_nodeB, tree_size = get_rootnode(funcB_ast)
+    if tree_size > 800:
+        return
     distance, opts = simple_distance(root_nodeA, root_nodeB,CustomNode.get_children, CustomNode.get_label, return_operations=True)
-    # distance, opts = simple_distance(root_nodeA, root_nodeB, return_operations=True)
 
-    sout1 = ''
-    sout2 = ''
-    sout3 = ''
+    removes = []
+    inserts = []
+    updates = []
+
     changes = []
+    edges = []
+    ids = []
+    instructions = []
     for opt in opts:
         s = OPERATIONS[opt.type]
-        sA = ""
-        sB = ""
-        sC = ""
+        remove_string = ""
+        insert_string = ""
+        update_item = ()
+        edge_string = ""
+        id_string = ""
+        bin_folder = ""
+        
         if opt.arg1 is not None:
             s += f"\t id:{opt.arg1.my_id} label:{opt.arg1.my_label}"
-            sA += f"{opt.arg1.my_id},"
+            remove_string += f"{opt.arg1.my_id}"
+            edge_string += f"{opt.arg1.edge}"
+            id_string += f"{opt.arg1.my_id}"
+            bin_folder = (bin_folderA,)
+
         if opt.arg2 is not None:
             s += f"\n\t id:{opt.arg2.my_id} label:{opt.arg2.my_label}"
-            sB += f"{opt.arg2.my_id},"
+            insert_string += f"{opt.arg2.my_id}"
+            edge_string += f"{opt.arg2.edge}"
+            id_string += f"{opt.arg2.my_id}"
+            bin_folder = (bin_folderB,)
+
         
         if "update" in s: 
-            sC += f"{opt.arg1.my_id},{opt.arg2.my_id},"
-            sA = ""
-            sB = ""
+            remove_string = ""
+            insert_string = ""
+            edge_string = ""
+            id_string = ""
+            bin_folder = (bin_folderA,bin_folderB)
+            update_item += (opt.arg1.my_id,opt.arg2.my_id)
+            id_string += f"{opt.arg1.my_id}->{opt.arg2.my_id}"
+            edge_string += f"{opt.arg1.edge}->{opt.arg2.edge}"
 
         if "match" not in s: 
             # print(s)
             changes.append(s)
-            sout1 += sA
-            sout2 += sB
-            sout3 += sC
+            edges.append(edge_string)
+            ids.append(id_string)
+
+            # instructions.append(get_instruction_at_op(bin_folder, edge_string))
+            
+
+            if(remove_string):
+                removes.append(remove_string)
+            if(insert_string):
+                inserts.append(insert_string)
+            if(update_item):
+                updates.append(update_item)
     
-    changes_np = np.array(changes)
-    df = pd.DataFrame(changes_np, columns=["Change"])
+  
+    # data = {"ID": ids, "Change":changes, "Instruction": instructions, "Edge": edges}
+    data = {"ID": ids, "Change":changes, "Edge": edges}
+
+    # changes_np = np.array(changes) #save instruction 
+    df = pd.DataFrame(data)
+    groups = get_groups(df, func_fileA, func_fileB)
+    change_groups = []
+    for id in ids:
+        if id in groups:
+            change_groups.append(groups[id])
+        else:
+            change_groups.append("None")
+
+    df['Group'] = change_groups
     s2 = df.style.applymap(add_color)
+
     save_panda(s2,path)
+    
 
 
     print("Removes")
-    print(sout1)
+    print(removes)
     print("Inserts")
-    print(sout2)
+    print(inserts) 
     print("Updates")
-    print(sout3)
+    print(updates)
     print("distance", distance)
     print("opts", len(opts))
 
-compare_ast(func_fileA = 'versions/otaApp-1_4_2_bin/0x200057d0.json', func_fileB = 'versions/otaApp-1_4_4_bin/0x200055d0.json')
+# compare_ast()
+# compare_ast('versions/otaApp-1_4_2_bin', 'versions/otaApp-1_4_4_bin',func_fileA = 'versions/otaApp-1_4_2_bin/0x2000ba98.json', func_fileB = 'versions/otaApp-1_4_4_bin/0x2000b824.json')
 

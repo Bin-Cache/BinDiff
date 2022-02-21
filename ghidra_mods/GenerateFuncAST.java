@@ -58,17 +58,11 @@ public class GenerateFuncAST extends GhidraScript {
     private AttributedGraph graph;
     protected HighFunction high;
 
-    String insertNodes = "i v 779 x 3";
-    String removeNodes = "i v 988 x 3,i v 286,i v 843,i v 266,i v 988 x 10,ram:2000ba54 o 101,ram:2000ba54 v 264,ram:2000ba54 o 102,ram:2000ba54 v 267,i v 272,i v 988 x 11,ram:2000ba56 o 103,ram:2000ba56 v 270,ram:2000ba56 o 104,ram:2000ba56 v 273,ram:2000ba5c o 109,i v 359,i v 845,ram:2000ba72 o 138,ram:2000ba5c o 293,ram:2000ba5c v 878,ram:2000ba72 o 295,ram:2000ba72 v 884";
-    String updateNodes = "ram:2000ba3c v 1013,ram:2000b7de v 799,ram:2000ba3c v 1016,ram:2000b7de v 802,ram:2000ba3c v 1011,ram:2000b7de v 797,ram:2000ba78 v 847,ram:2000b804 v 674";
-
-    
+   
     String folder = "";
     String functionName = "";
 
-    String[] insertStringArray = insertNodes.split(","); 
-    String[] removeStringArray = removeNodes.split(","); 
-    String[] updateStringArray = updateNodes.split(","); 
+   
 
     @Override
     public void run() throws Exception {
@@ -76,68 +70,62 @@ public class GenerateFuncAST extends GhidraScript {
         functionName = args[0];
         folder = args[1];
         long offset = Long.decode(functionName);
-        
+
         // Address addr = this.currentAddress;
         Address addr = getAddress(offset);
         func = this.getFunctionContaining(addr);
         if (func == null) {
-           
+
             return;
         }
 
         buildAST();
 
-        GraphType graphType = new GraphTypeBuilder("AST")
-                .vertexType(DEFAULT)
-                .vertexType(CONSTANT)
-                .vertexType(REGISTER)
-                .vertexType(UNIQUE)
-                .vertexType(PERSISTENT)
-                .vertexType(REMOVED)
-                .vertexType(INSERTED)
-                .vertexType(MODIFIED)
-                .vertexType(ADDRESS_TIED)
-                .vertexType(OP)
-                .edgeType(DEFAULT)
-                .edgeType(WITHIN_BLOCK)
-                .edgeType(BETWEEN_BLOCK)
-                .build();
+		GraphType graphType = new GraphTypeBuilder("AST")
+				.vertexType(DEFAULT)
+				.vertexType(CONSTANT)
+				.vertexType(REGISTER)
+				.vertexType(UNIQUE)
+				.vertexType(PERSISTENT)
+				.vertexType(ADDRESS_TIED)
+				.vertexType(OP)
+				.edgeType(DEFAULT)
+				.edgeType(WITHIN_BLOCK)
+				.edgeType(BETWEEN_BLOCK)
+				.build();
 
-        GraphDisplayOptions displayOptions = new GraphDisplayOptionsBuilder(graphType)
-                .vertexSelectionColor(WebColors.DEEP_PINK)
-                .edgeSelectionColor(WebColors.DEEP_PINK)
-                .defaultVertexColor(WebColors.RED)
-                .defaultEdgeColor(WebColors.DARK_GRAY)
-                .defaultVertexShape(VertexShape.ELLIPSE)
-                .defaultLayoutAlgorithm("Hierarchical MinCross Coffman Graham")
-                .useIcons(false)
-                .arrowLength(15)
-                .labelPosition(GraphLabelPosition.SOUTH)
-                .shapeOverrideAttribute(SHAPE_ATTRIBUTE)
-                .vertex(DEFAULT, VertexShape.ELLIPSE, WebColors.DARK_GRAY)
-                .vertex(CONSTANT, VertexShape.ELLIPSE, WebColors.DARK_GREEN)
-                .vertex(REGISTER, VertexShape.ELLIPSE, WebColors.NAVY)
-                .vertex(UNIQUE, VertexShape.ELLIPSE, WebColors.BLACK)
-                .vertex(PERSISTENT, VertexShape.ELLIPSE, WebColors.DARK_ORANGE)
-                .vertex(REMOVED, VertexShape.ELLIPSE, WebColors.RED)
-                .vertex(INSERTED, VertexShape.ELLIPSE, WebColors.MEDIUM_BLUE)
-                .vertex(MODIFIED, VertexShape.ELLIPSE, WebColors.YELLOW_GREEN)
-                .vertex(ADDRESS_TIED, VertexShape.ELLIPSE, WebColors.ORANGE)
-                .vertex(OP, VertexShape.RECTANGLE, WebColors.DARK_GRAY)
-                .edge(DEFAULT, WebColors.DARK_GRAY)
-                .edge(WITHIN_BLOCK, WebColors.BLACK)
-                .edge(BETWEEN_BLOCK, WebColors.RED)
-                .build();
+            GraphDisplayOptions displayOptions = new GraphDisplayOptionsBuilder(graphType)
+				.vertexSelectionColor(WebColors.DEEP_PINK)
+				.edgeSelectionColor(WebColors.DEEP_PINK)
+				.defaultVertexColor(WebColors.RED)
+				.defaultEdgeColor(WebColors.NAVY)
+				.defaultVertexShape(VertexShape.ELLIPSE)
+				.defaultLayoutAlgorithm("Hierarchical MinCross Coffman Graham")
+				.useIcons(false)
+				.arrowLength(15)
+				.labelPosition(GraphLabelPosition.SOUTH)
+				.shapeOverrideAttribute(SHAPE_ATTRIBUTE)
+				.vertex(DEFAULT, VertexShape.ELLIPSE, WebColors.RED)
+				.vertex(CONSTANT, VertexShape.ELLIPSE, WebColors.DARK_GREEN)
+				.vertex(REGISTER, VertexShape.ELLIPSE, WebColors.NAVY)
+				.vertex(UNIQUE, VertexShape.ELLIPSE, WebColors.BLACK)
+				.vertex(PERSISTENT, VertexShape.ELLIPSE, WebColors.DARK_ORANGE)
+				.vertex(ADDRESS_TIED, VertexShape.ELLIPSE, WebColors.ORANGE)
+				.vertex(OP, VertexShape.RECTANGLE, WebColors.RED)
+				.edge(DEFAULT, WebColors.BLUE)
+				.edge(WITHIN_BLOCK, WebColors.BLACK)
+				.edge(BETWEEN_BLOCK, WebColors.RED)
+				.build();
+
 
         graph = new AttributedGraph("AST Graph", graphType);
         buildGraph();
         JsonGraphExporter exporter = new JsonGraphExporter();
         List<String> lines = doExport(exporter, graph);
         String ast_json_string = String.valueOf(lines.get(0));
-        // println(ast_json_string);
 
-
-        PrintWriter pw = new PrintWriter("/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/"+folder+"/"+functionName+".json");
+        PrintWriter pw = new PrintWriter("/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/" + folder
+                + "/" + functionName + ".json");
         pw.write(ast_json_string);
         pw.flush();
         pw.close();
@@ -150,11 +138,10 @@ public class GenerateFuncAST extends GhidraScript {
         return lines;
     }
 
-
-
-    private Address getAddress(long offset){
+    private Address getAddress(long offset) {
         return this.currentProgram.getAddressFactory().getDefaultAddressSpace().getAddress(offset);
-}
+    }
+
     private void buildAST() throws DecompileException {
         DecompileOptions options = new DecompileOptions();
         DecompInterface ifc = new DecompInterface();
@@ -188,114 +175,82 @@ public class GenerateFuncAST extends GhidraScript {
         return id;
     }
 
-    HashMap<String, Integer> inputs = new HashMap<>();
+    // HashMap<String, Integer> inputs = new HashMap<>();
 
     protected AttributedVertex createVarnodeVertex(VarnodeAST vn) {
-        String name = vn.getAddress().toString(true);
-        String id = getVarnodeKey(vn);
-        String vertexType = DEFAULT;
-        if (vn.isRegister()) {
-            Register reg = func.getProgram().getRegister(vn.getAddress(), vn.getSize());
-            if (reg != null) {
-                name = reg.getName();
-            }
-        }
+		String name = vn.getAddress().toString(true);
+		String id = getVarnodeKey(vn);
+		String vertexType = DEFAULT;
+		if (vn.isConstant()) {
+			vertexType = CONSTANT;
+		}
+		else if (vn.isRegister()) {
+			vertexType = REGISTER;
+			Register reg = func.getProgram().getRegister(vn.getAddress(), vn.getSize());
+			if (reg != null) {
+				name = reg.getName();
+			}
+		}
+		else if (vn.isUnique()) {
+			vertexType = UNIQUE;
+		}
+		else if (vn.isPersistent()) {
+			vertexType = PERSISTENT;
+		}
+		else if (vn.isAddrTied()) {
+			vertexType = ADDRESS_TIED;
+		}
+		AttributedVertex vert = graph.addVertex(id, name);
+		vert.setVertexType(vertexType);
 
-        if (vn.isInput()) {
-            println(id);
-            Integer input_count = inputs.get(id);
-            if (input_count == null) {
-                inputs.put(id, 1);
-            } else {
-                println("second coming");
-                Integer update = input_count + 1;
-                inputs.put(id, update);
-                println(update.toString());
-                id = id + " x " + update.toString();
-                println(id);
-                
-            }
-        }
+		// if it is an input override the shape to be a triangle
+		if (vn.isInput()) {
+			vert.setAttribute(SHAPE_ATTRIBUTE, VertexShape.TRIANGLE_DOWN.getName());
+		}
+		return vert;
+	}
 
-    if(ArrayUtils.contains(insertStringArray, id)){
-        vertexType = INSERTED;
-        println("\n\nhello");
-    }    
-    if(ArrayUtils.contains(removeStringArray, id)){
-        vertexType = REMOVED;
-    }
-    if(ArrayUtils.contains(updateStringArray, id)){
-        vertexType = MODIFIED;
-    }
+	protected AttributedVertex createOpVertex(PcodeOpAST op) {
+		String name = op.getMnemonic();
+		String id = getOpKey(op);
+		int opcode = op.getOpcode();
+		if ((opcode == PcodeOp.LOAD) || (opcode == PcodeOp.STORE)) {
+			Varnode vn = op.getInput(0);
+			AddressSpace addrspace =
+				func.getProgram().getAddressFactory().getAddressSpace((int) vn.getOffset());
+			name += ' ' + addrspace.getName();
+		}
+		else if (opcode == PcodeOp.INDIRECT) {
+			Varnode vn = op.getInput(1);
+			if (vn != null) {
+				PcodeOp indOp = high.getOpRef((int) vn.getOffset());
+				if (indOp != null) {
+					name += " (" + indOp.getMnemonic() + ')';
+				}
+			}
+		}
+		AttributedVertex vert = graph.addVertex(id, name);
+		vert.setVertexType(OP);
+		return vert;
+	}
 
-        AttributedVertex vert = graph.addVertex(id, name);
-        vert.setVertexType(vertexType);
+	protected AttributedVertex getVarnodeVertex(Map<Integer, AttributedVertex> vertices,
+			VarnodeAST vn) {
+		AttributedVertex res;
+		res = vertices.get(vn.getUniqueId());
+		if (res == null) {
+			res = createVarnodeVertex(vn);
+			vertices.put(vn.getUniqueId(), res);
+		}
+		return res;
+	}
 
-        // if it is an input override the shape to be a triangle
-        if (vn.isInput()) {
-            vert.setAttribute(SHAPE_ATTRIBUTE, VertexShape.TRIANGLE_DOWN.getName());
-        }
-        return vert;
-    }
+	protected AttributedEdge createEdge(AttributedVertex in, AttributedVertex out) {
+		AttributedEdge newEdge = graph.addEdge(in, out);
+		newEdge.setEdgeType(DEFAULT);
+		return newEdge;
+	}
 
-    protected AttributedVertex createOpVertex(PcodeOpAST op) {
-        String name = op.getMnemonic();
-        String id = getOpKey(op);
-        int opcode = op.getOpcode();
-        if ((opcode == PcodeOp.LOAD) || (opcode == PcodeOp.STORE)) {
-            Varnode vn = op.getInput(0);
-            AddressSpace addrspace = func.getProgram().getAddressFactory().getAddressSpace((int) vn.getOffset());
-            name += ' ' + addrspace.getName();
-        } else if (opcode == PcodeOp.INDIRECT) {
-            Varnode vn = op.getInput(1);
-            if (vn != null) {
-                PcodeOp indOp = high.getOpRef((int) vn.getOffset());
-                if (indOp != null) {
-                    name += " (" + indOp.getMnemonic() + ')';
-                }
-            }
-        }
-        AttributedVertex vert = graph.addVertex(id, name);
-        vert.setVertexType(OP);
-        if(ArrayUtils.contains(insertStringArray, id)){
-            vert.setVertexType(INSERTED);
-        }    
-        if(ArrayUtils.contains(removeStringArray, id)){
-            vert.setVertexType(REMOVED);
-        }        
-        if(ArrayUtils.contains(updateStringArray, id)){
-            vert.setVertexType(MODIFIED);
-        }
-       
-        return vert;
-    }
-
-    protected AttributedVertex getVarnodeVertex(Map<Integer, AttributedVertex> vertices,
-            VarnodeAST vn) {
-        AttributedVertex res;
-        res = vertices.get(vn.getUniqueId());
-        if (res == null) {
-            res = createVarnodeVertex(vn);
-            vertices.put(vn.getUniqueId(), res);
-        } 
-        else {
-         String shape = res.getAttribute(SHAPE_ATTRIBUTE);
-         if (shape != null && shape.equals("Triangle Down")) {
-             res = createVarnodeVertex(vn);
-             vertices.put(vn.getUniqueId(), res);
-         }
-        }
-
-        return res;
-    }
-
-
-
-    protected AttributedEdge createEdge(AttributedVertex in, AttributedVertex out, VarnodeAST vn) {
-        AttributedEdge newEdge = graph.addEdge(in, out);
-        newEdge.setEdgeType(DEFAULT);
-        return newEdge;
-    }
 
     protected void buildGraph() {
 
@@ -316,14 +271,14 @@ public class GenerateFuncAST extends GhidraScript {
                 VarnodeAST vn = (VarnodeAST) op.getInput(i);
                 if (vn != null) {
                     AttributedVertex v = getVarnodeVertex(vertices, vn);
-                    createEdge(v, o, vn);
+                    createEdge(v, o);
                 }
             }
             VarnodeAST outvn = (VarnodeAST) op.getOutput();
             if (outvn != null) {
                 AttributedVertex outv = getVarnodeVertex(vertices, outvn);
                 if (outv != null) {
-                    createEdge(o, outv, outvn);
+                    createEdge(o, outv);
                 }
             }
         }
@@ -334,6 +289,4 @@ public class GenerateFuncAST extends GhidraScript {
         return opiter;
     }
 
-
 }
-

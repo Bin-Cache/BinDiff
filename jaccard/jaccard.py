@@ -8,8 +8,7 @@ import copy
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from IPython.core.display import display, HTML
-display(HTML("<style>div.output_scroll { height: 44em; }</style>"))
+from IPython import display
 
 
 def read_graph(graph_fileA = 'ghidra_mods/graphA.json', graph_fileB = 'ghidra_mods/graphB.json'):

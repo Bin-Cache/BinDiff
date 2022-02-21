@@ -35,6 +35,6 @@ def dump_refined_pcode(func, high_func):
 # == run examples =================================================================================
 def getAddress(offset):
     return currentProgram.getAddressFactory().getDefaultAddressSpace().getAddress(offset)
-func = currentProgram.getListing().getFunctionContaining(getAddress(0x200077E4))
+func = currentProgram.getListing().getFunctionContaining(getAddress(0x2000b996))
 hf = get_high_function(func)            # we need a high function from the decompiler
 dump_refined_pcode(func, hf)            # dump straight refined pcode as strings
