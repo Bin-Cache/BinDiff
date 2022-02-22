@@ -133,6 +133,6 @@ dmypy.json
 .idea/
 .ipynb_checkpoints
 venv/
-ghidra_proj/*
-!ghidra_proj/.gitkeep
+ghidra_mods/ghidra_proj/*
+!ghidra_mods/ghidra_proj/.gitkeep
 versions/*/
