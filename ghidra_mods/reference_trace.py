@@ -45,7 +45,11 @@ func_graph = refwalk.get_all_func_end(currentProgram, listing, func_graph)
 # refwalk.printd(func_graph)
  
 
-folder = "/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/versions/" + get_valid_filename(program_file) + "/"
+args = getScriptArgs()
+cwd = args[0]
+
+
+folder = cwd +"/versions/"+ get_valid_filename(program_file) + "/"
 if not os.path.exists(folder):
     os.makedirs(folder)
 file_name = os.path.join(folder, 'info_graph.json')

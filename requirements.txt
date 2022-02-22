@@ -1,10 +1,6 @@
-# deepdiff
 pydot
 zss
 networkx
-# datasketch
-# tlsh
-# python-tlsh
 matplotlib
 seaborn
 IPython

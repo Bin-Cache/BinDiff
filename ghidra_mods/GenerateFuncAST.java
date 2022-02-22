@@ -61,14 +61,16 @@ public class GenerateFuncAST extends GhidraScript {
    
     String folder = "";
     String functionName = "";
+    String cwd = "";
 
    
 
     @Override
     public void run() throws Exception {
         String[] args = getScriptArgs();
-        functionName = args[0];
-        folder = args[1];
+        cwd = args[0];
+        functionName = args[1];
+        folder = args[2];
         long offset = Long.decode(functionName);
 
         // Address addr = this.currentAddress;
@@ -124,7 +126,7 @@ public class GenerateFuncAST extends GhidraScript {
         List<String> lines = doExport(exporter, graph);
         String ast_json_string = String.valueOf(lines.get(0));
 
-        PrintWriter pw = new PrintWriter("/Users/wamuo/Documents/Lab/Projects/FunctionPeripheralSequence/" + folder
+        PrintWriter pw = new PrintWriter(cwd + "/"+folder
                 + "/" + functionName + ".json");
         pw.write(ast_json_string);
         pw.flush();

@@ -220,6 +220,3 @@ def calculate_jaccard(graph_fileA = 'ghidra_mods/graphA.json', graph_fileB = 'gh
 # graphB = processOpCodes(main_graphB, proc_format=proc_format)
 # scores = calc_sim(compare_jaccard, graphA, graphB)
 # draw_results(scores)
-
-
-

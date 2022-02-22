@@ -12,9 +12,6 @@ from IPython import display
 import subprocess
 
 
-sys.path.append('/Users/wamuo/Documents/GitHub/zhang-shasha')
-# print(sys.path)
-
 from zss import simple_distance, Node
 
 # Compare using json deep equals
@@ -577,4 +574,3 @@ def compare_ast(bin_folderA, bin_folderB, func_fileA = 'binary_ast/func_0x2000ba
 
 # compare_ast()
 # compare_ast('versions/otaApp-1_4_2_bin', 'versions/otaApp-1_4_4_bin',func_fileA = 'versions/otaApp-1_4_2_bin/0x2000ba98.json', func_fileB = 'versions/otaApp-1_4_4_bin/0x2000b824.json')
-

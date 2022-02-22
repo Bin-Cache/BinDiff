@@ -5,8 +5,8 @@ import monkeyhex
 import sys
 import IPython
 
-file_path = "/Users/wamuo/Documents/Lab/Devices/ring/RingChime/otaApp-1.4.2.bin"
-file_path2 = "/Users/wamuo/Documents/Lab/Devices/ring/RingChime/otaApp-1.4.4.bin"
+file_path = "otaApp-1.4.2.bin"
+file_path2 = "otaApp-1.4.4.bin"
 main_opts = {
     'backend': 'blob',
     'arch': 'ARMCortexM',
