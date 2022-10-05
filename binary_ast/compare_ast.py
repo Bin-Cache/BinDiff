@@ -33,6 +33,9 @@ OPERATIONS = {
     3: 'match'
 }
 
+#minhajul
+# commenting out as we don't need this
+'''
 A = (
     Node("f")
     .addkid(
@@ -53,7 +56,7 @@ B = (
                     )
     .addkid(Node("e"))
 )
-
+'''
 
 # distance, opts = simple_distance(A, B, return_operations=True)
 
@@ -316,6 +319,9 @@ def save_result(result, path):
         json.dump(result, outfile)
 
 
+
+
+
 def add_color(text):
     color = "black"
     if ("remove" in text):
@@ -372,18 +378,14 @@ def get_instruction_at_op(binary_folder, edge_string):
 
 
 def get_changes(table):
-    try:
+    updates = table[table['Change'].astype(str).str.contains('update')]
 
-        updates = table[table['Change'].str.contains('update')]
+    inserts = table[table['Change'].astype(str).str.contains(
+        'insert')]
+    removes = table[table['Change'].astype(str).str.contains(
+        'remove')]
 
-        inserts = table[table['Change'].str.contains(
-            'insert')]
-        removes = table[table['Change'].str.contains(
-            'remove')]
-
-        return updates, inserts, removes
-    except:
-        return
+    return updates, inserts, removes
 
 
 
@@ -397,14 +399,12 @@ def get_groups(table, func_fileA = 'versions/otaApp-1_4_2_bin/0x2000ba98.json', 
     adjB = get_adjacency_list(get_ast(func_fileB)['edges'])
     adjB = remove_cycles(adjB)
 
-    changes = get_changes(table)
-    if(changes is None):
-        return {}
+ 
     updates, inserts, removes = get_changes(table)
     change_group = {}
 
-    remove_calls_ids = removes[removes['Change'].str.contains('label:CALL')]['ID'].values.tolist()
-    insert_calls_ids = inserts[inserts['Change'].str.contains('label:CALL')]['ID'].values.tolist()
+    remove_calls_ids = removes[removes['Change'].astype(str).str.contains('label:CALL')]['ID'].values.tolist()
+    insert_calls_ids = inserts[inserts['Change'].astype(str).str.contains('label:CALL')]['ID'].values.tolist()
     print("removes",remove_calls_ids)
     insert_ids = inserts['ID'].values.tolist()
     remove_ids = removes['ID'].values.tolist()
@@ -480,12 +480,16 @@ def compare_ast(bin_folderA, bin_folderB, func_fileA = 'binary_ast/func_0x2000ba
     funcB_ast = get_ast(func_fileB)
 
     root_nodeA, tree_size = get_rootnode(funcA_ast)
-    if tree_size > 500:
+    if tree_size > 800:
         return
     root_nodeB, tree_size = get_rootnode(funcB_ast)
-    if tree_size > 500:
+    if tree_size > 800:
         return
     distance, opts = simple_distance(root_nodeA, root_nodeB,CustomNode.get_children, CustomNode.get_label, return_operations=True)
+    
+    # minhajul
+    #testing
+    print("Anchor Point")
 
     removes = []
     inserts = []
@@ -552,11 +556,6 @@ def compare_ast(bin_folderA, bin_folderB, func_fileA = 'binary_ast/func_0x2000ba
     # changes_np = np.array(changes) #save instruction 
     df = pd.DataFrame(data)
     groups = get_groups(df, func_fileA, func_fileB)
-    
-    if not groups:
-        print("Error Processing")
-        return
-
     change_groups = []
     for id in ids:
         if id in groups:
