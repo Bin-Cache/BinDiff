@@ -487,9 +487,6 @@ def compare_ast(bin_folderA, bin_folderB, func_fileA = 'binary_ast/func_0x2000ba
         return
     distance, opts = simple_distance(root_nodeA, root_nodeB,CustomNode.get_children, CustomNode.get_label, return_operations=True)
     
-    # minhajul
-    #testing
-    print("Anchor Point")
 
     removes = []
     inserts = []
